@@ -9,7 +9,6 @@
 #set text(lang: "ja", region: "JP")
 #set heading(numbering: none)
 
-
 // ========== ここを編集 ==========
 #let title = "単相変圧器の特性試験と各種三相結線"
 #let place = "電気機械実験室"
@@ -128,29 +127,37 @@ caption: [実負荷試験時の特性]
 
 ==== (2)
 
-#figure(
-  image("hakei/yy_phase1_0.png", width: 70%),
-  caption: [star-star結線の一次側相電圧波形]
-)
-#figure(
-  image("hakei/yy_phase2_1.png", width: 70%),
-  caption: [star-star結線の一次側線間電圧波形]
-)
-#figure(
-  image("hakei/yy_phase3_2.png", width: 70%),
-  caption: [star-star結線の二次側相電圧波形]
-)
-#figure(
-  image("hakei/yy_line1_3.png", width: 70%),
-  caption: [star-star結線の二次側線間電圧波形]
+#grid(
+  columns: 2,
+  [#figure(
+    image("hakei/yy_phase1_0.png", width: 90%),
+    caption: [star-star結線の一次側相電圧波形]
+  )<yy_phase1_0>
+  #v(2em)],[
+  #figure(
+    image("hakei/yy_phase2_1.png", width: 90%),
+    caption: [star-star結線の一次側線間電圧波形]
+  )<yy_phase2_1>
+  #v(2em)],[
+  #figure(
+    image("hakei/yy_phase3_2.png", width: 90%),
+    caption: [star-star結線の二次側相電圧波形]
+  )<yy_phase3_2>
+  #v(2em)],[
+  #figure(
+    image("hakei/yy_line1_3.png", width: 90%),
+    caption: [star-star結線の二次側線間電圧波形]
+  )<yy_line1_3>
+  #v(2em)
+  ]
 )
 
 ==== (3)
 
 #figure(
-  image("hakei/yy_line3_5.png", width: 70%),
+  image("hakei/yy_line3_5.png", width: 50%),
   caption: [star-star結線の励磁電流波形]
-)
+)<yy_line3_5>
 
 
 === 2.3.2 誤結線
@@ -160,25 +167,33 @@ caption: [実負荷試験時の特性]
 ==== (1)
 
 ==== (2)
-#figure(
-  image("hakei/dy_line1_6.png", width: 70%),
-  caption: [delta-star結線の一次側線間電圧波形]
-)
-#figure(
-  image("hakei/dy_line2_7.png", width: 70%),
-  caption: [delta-star結線の二次側相電圧波形]
-)
-#figure(
-  image("hakei/dy_phase3_8.png", width: 70%),
-  caption: [delta-star結線の二次側線間電圧波形]
+
+#grid(
+  columns: 2,[
+  #figure(
+    image("hakei/dy_line1_6.png", width: 90%),
+    caption: [delta-star結線の一次側線間電圧波形]
+  )<dy_line1_6>
+  #v(2em)],[
+  #figure(
+    image("hakei/dy_line2_7.png", width: 90%),
+    caption: [delta-star結線の二次側相電圧波形]
+  )<dy_line2_7>
+  #v(2em)],[
+  #figure(
+    image("hakei/dy_phase3_8.png", width: 90%),
+    caption: [delta-star結線の二次側線間電圧波形]
+  )<dy_phase3_8>
+  #v(2em)]
 )
 
 ==== (3)
 
 #figure(
-  image("hakei/dy_current_9.png", width: 70%),
+  image("hakei/dy_current_9.png", width: 50%),
   caption: [delta-star結線の励磁電流波形]
-)
+)<dy_current_9>
+
 === 2.4.2 誤結線
 == 2.5
 === 2.5.1 正規結線
@@ -188,17 +203,18 @@ caption: [実負荷試験時の特性]
 #figure(
   image("hakei/dd_line1_10.png", width: 70%),
   caption: [delta-delta結線の一次側線間電圧波形]
-)
+)<dd_line1_10>
 #figure(
   image("hakei/dd_line2_11.png", width: 70%),
   caption: [delta-delta結線の二次側線間電圧波形]
-)
+)<dd_line2_11>
 
 ==== (3)
 #figure(
   image("hakei/dd_line3_12.png", width: 70%),
   caption: [delta-delta結線の励磁電流波形]
-)
+)<dd_line3_12>
+
 === 2.5.2 deltaループを開く
 === 2.5.3 誤結線
 == 2.6
@@ -209,18 +225,18 @@ caption: [実負荷試験時の特性]
 #figure(
   image("hakei/od_line1_13.png", width: 70%),
   caption: [open delta結線の一次側線間電圧波形]
-)
+)<od_line1_13>
 #figure(
   image("hakei/od_line2_14.png", width: 70%),
   caption: [open delta結線の二次側線間電圧波形]
-)
+)<od_line2_14>
 
 ==== (3)
 
 #figure(
   image("hakei/od_current_15.png", width: 70%),
   caption: [open delta結線の励磁電流波形]
-)
+)<od_current_15>
 
 === 2.6.2 誤結線
 
