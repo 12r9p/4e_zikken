@@ -120,12 +120,21 @@ caption: [実負荷試験時の特性]
 
 電圧変動率εは0.025604297であった。
 
-== 2.3
+== 2.3 star-star結線
 === 2.3.1 正規結線
+
 ==== (1)
 
+結果を図 @2-3-1kekka に示す。
+
+#figure(
+  image("assets/2-3-1kekka.png", width: 50%),
+  caption: [star-star結線（正規結線）の測定結果]
+)<2-3-1kekka>
 
 ==== (2)
+
+一次側および二次側の電圧波形を図 @yy_phase1_0 ～ @yy_line1_3 に示す。
 
 #grid(
   columns: 2,
@@ -154,6 +163,8 @@ caption: [実負荷試験時の特性]
 
 ==== (3)
 
+励磁電流の波形を図 @yy_line3_5 に示す。
+
 #figure(
   image("hakei/yy_line3_5.png", width: 50%),
   caption: [star-star結線の励磁電流波形]
@@ -161,12 +172,27 @@ caption: [実負荷試験時の特性]
 
 
 === 2.3.2 誤結線
+結果を図 @2-3-2kekka に示す。
 
-== 2.4
+#figure(
+  image("assets/2-3-2kekka.png", width: 50%),
+  caption: [star-star結線（誤結線）の測定結果]
+)<2-3-2kekka>
+
+== 2.4 delta-star結線
 === 2.4.1 正規結線
 ==== (1)
 
+結果を図 @2-4-1kekka に示す。
+#figure(
+  image("assets/2-4-1kekka.png", width: 50%),
+  caption: [delta-star結線（正規結線）の測定結果]
+)<2-4-1kekka>
+
+
 ==== (2)
+
+一次側および二次側の電圧波形を図 @dy_line1_6 ～ @dy_phase3_8 に示す。
 
 #grid(
   columns: 2,[
@@ -189,56 +215,113 @@ caption: [実負荷試験時の特性]
 
 ==== (3)
 
+励磁電流の波形を図 @dy_current_9 に示す。
+
 #figure(
   image("hakei/dy_current_9.png", width: 50%),
   caption: [delta-star結線の励磁電流波形]
 )<dy_current_9>
 
 === 2.4.2 誤結線
-== 2.5
+結果を図 @2-4-2kekka に示す。
+
+#figure(
+  image("assets/2-4-2kekka.png", width: 50%),
+  caption: [delta-star結線（誤結線）の測定結果]
+)<2-4-2kekka>
+
+== 2.5 delta-delta結線
 === 2.5.1 正規結線
 ==== (1)
+結果を図 @2-5-1kekka に示す。
+
+#figure(
+  image("assets/2-5-1kekka.png", width: 50%),
+  caption: [delta-delta結線（正規結線）の測定結果]
+)<2-5-1kekka>
+
 
 ==== (2)
-#figure(
-  image("hakei/dd_line1_10.png", width: 70%),
-  caption: [delta-delta結線の一次側線間電圧波形]
-)<dd_line1_10>
-#figure(
-  image("hakei/dd_line2_11.png", width: 70%),
-  caption: [delta-delta結線の二次側線間電圧波形]
-)<dd_line2_11>
+
+一次側および二次側の線間電圧波形を図 @dd_line1_10 ～ @dd_line2_11 に示す。
+
+#grid(
+  columns: 2,
+  [#figure(
+    image("hakei/dd_line1_10.png", width: 90%),
+    caption: [delta-delta結線の一次側線間電圧波形]
+  )<dd_line1_10>
+  #v(2em)],
+  [#figure(
+    image("hakei/dd_line2_11.png", width: 90%),
+    caption: [delta-delta結線の二次側線間電圧波形]
+  )<dd_line2_11>
+  #v(2em)]
+)
 
 ==== (3)
+
+励磁電流の波形を図 @dd_line3_12 に示す。
+
 #figure(
-  image("hakei/dd_line3_12.png", width: 70%),
+  image("hakei/dd_line3_12.png", width: 50%),
   caption: [delta-delta結線の励磁電流波形]
 )<dd_line3_12>
 
 === 2.5.2 deltaループを開く
 === 2.5.3 誤結線
-== 2.6
+結果を図 @2-5-3kekka に示す。
+
+#figure(
+  image("assets/2-5-3kekka.png", width: 50%),
+  caption: [delta-delta結線（誤結線）の測定結果]
+)<2-5-3kekka>
+
+== 2.6 open delta-open delta結線
 === 2.6.1 正規結線
 ==== (1)
+結果を図 @2-6-1kekka に示す。
+
+#figure(
+  image("assets/2-6-1kekka.png", width: 50%),
+  caption: [open delta-open delta結線（正規結線）の測定結果]
+)<2-6-1kekka>
+
 
 ==== (2)
-#figure(
-  image("hakei/od_line1_13.png", width: 70%),
-  caption: [open delta結線の一次側線間電圧波形]
-)<od_line1_13>
-#figure(
-  image("hakei/od_line2_14.png", width: 70%),
-  caption: [open delta結線の二次側線間電圧波形]
-)<od_line2_14>
+
+一次側および二次側の線間電圧波形を図 @od_line1_13 ～ @od_line2_14 に示す。
+
+#grid(
+  columns: 2,
+  [#figure(
+    image("hakei/od_line1_13.png", width: 90%),
+    caption: [open delta結線の一次側線間電圧波形]
+  )<od_line1_13>
+  #v(2em)],
+  [#figure(
+    image("hakei/od_line2_14.png", width: 90%),
+    caption: [open delta結線の二次側線間電圧波形]
+  )<od_line2_14>
+  #v(2em)]
+)
 
 ==== (3)
 
+励磁電流の波形を図 @od_current_15 に示す。
+
 #figure(
-  image("hakei/od_current_15.png", width: 70%),
+  image("hakei/od_current_15.png", width: 50%),
   caption: [open delta結線の励磁電流波形]
 )<od_current_15>
 
 === 2.6.2 誤結線
+結果を図 @2-6-2kekka に示す。
+
+#figure(
+  image("assets/2-6-2kekka.png", width: 50%),
+  caption: [open delta-open delta結線（誤結線）の測定結果]
+)<2-6-2kekka>
 
 
 = 検討
