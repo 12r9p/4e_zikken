@@ -29,7 +29,7 @@
   作成者： 佐藤 匠
 ])
 #align(left, [
-  提出日： #datetime.today().display("[year]年[month]月[day]日")
+  作成日： #datetime.today().display("[year]年[month]月[day]日")
 ])
 #align(left, [
   実験日： #date
