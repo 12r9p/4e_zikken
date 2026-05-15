@@ -19,20 +19,21 @@
   caption : ""
   ) = {
   let label_name = path.split("/").last().split(".").first()
-  figure(
-    image(path, width: 60%),
-    caption: caption,
-  ) + label(label_name)
+  [
+    #figure(
+      image(path, width: 60%),
+      caption: caption,
+    )
+    #label(label_name)
+  ]
 }
 
-// --- 以下、使用例 ---
-
+/**  figure_report の使用例
 #figure_report(
   path: "../3_sekiguchi/assets/2-1kairo.png",
   caption: "open delta-open delta 結線回路"
   )
-
-参照する場合は @2-6kairo と書くだけでリンクされます。
+**/
 
 #let table_paper(
   caption: "",
