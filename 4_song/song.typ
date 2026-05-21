@@ -143,7 +143,11 @@
   figure_report(path: "3-1/3-1_1ph_half_cap_dc.jpg", caption: "単相半波整流波形（Cあり DC結合, V_in = 40 V）"),
 )
 #align(center)[
-  #figure_report(path: "3-1/3-1_1ph_half_cap_ac.jpg", caption: "単相半波整流波形（Cあり AC結合, V_in = 40 V）", width: 48%)
+  #figure_report(
+    path: "3-1/3-1_1ph_half_cap_ac.jpg",
+    caption: "単相半波整流波形（Cあり AC結合, V_in = 40 V）",
+    width: 48%,
+  )
 ]
 
 #csv_table(
@@ -176,7 +180,11 @@
   figure_report(path: "3-2/3-2_1ph_bridge_cap_dc.jpg", caption: "単相ブリッジ整流波形（Cあり DC結合, V_in = 40 V）"),
 )
 #align(center)[
-  #figure_report(path: "3-2/3-2_1ph_bridge_cap_ac.jpg", caption: "単相ブリッジ整流波形（Cあり AC結合, V_in = 40 V）", width: 48%)
+  #figure_report(
+    path: "3-2/3-2_1ph_bridge_cap_ac.jpg",
+    caption: "単相ブリッジ整流波形（Cあり AC結合, V_in = 40 V）",
+    width: 48%,
+  )
 ]
 
 #csv_table(
@@ -209,7 +217,11 @@
   figure_report(path: "3-3/3-3_3ph_half_cap_dc.jpg", caption: "三相半波整流波形（Cあり DC結合, V_in = 40 V）"),
 )
 #align(center)[
-  #figure_report(path: "3-3/3-3_3ph_half_cap_ac.jpg", caption: "三相半波整流波形（Cあり AC結合, V_in = 40 V）", width: 48%)
+  #figure_report(
+    path: "3-3/3-3_3ph_half_cap_ac.jpg",
+    caption: "三相半波整流波形（Cあり AC結合, V_in = 40 V）",
+    width: 48%,
+  )
 ]
 
 #csv_table(
@@ -275,7 +287,11 @@
   figure_report(path: "3-5/3-5_1ph_half_thy_90deg.jpg", caption: "サイリスタ半波整流波形（α = 90°, V_in = 40 V）"),
 )
 #align(center)[
-  #figure_report(path: "3-5/3-5_1ph_half_thy_120deg.jpg", caption: "サイリスタ半波整流波形（α = 120°, V_in = 40 V）", width: 48%)
+  #figure_report(
+    path: "3-5/3-5_1ph_half_thy_120deg.jpg",
+    caption: "サイリスタ半波整流波形（α = 120°, V_in = 40 V）",
+    width: 48%,
+  )
 ]
 
 #csv_table(
@@ -305,7 +321,11 @@
   figure_report(path: "3-6/3-6_1ph_bridge_thy_90deg.jpg", caption: "混合ブリッジ整流波形（α = 90°, V_in = 40 V）"),
 )
 #align(center)[
-  #figure_report(path: "3-6/3-6_1ph_bridge_thy_120deg.jpg", caption: "混合ブリッジ整流波形（α = 120°, V_in = 40 V）", width: 48%)
+  #figure_report(
+    path: "3-6/3-6_1ph_bridge_thy_120deg.jpg",
+    caption: "混合ブリッジ整流波形（α = 120°, V_in = 40 V）",
+    width: 48%,
+  )
 ]
 
 #csv_table(
@@ -378,21 +398,21 @@
 相電圧 $v_p (theta) = sqrt(2) V_p cos theta$ （ただし線間電圧 $V_L$ に対して相実効電圧 $V_p = V_L / sqrt(3)$）とする。出力電圧は各相の最大値が順次現れ、周期は $2pi / 3$、対称な積分範囲は $-pi / 3 <= theta <= pi / 3$ となる。
 - *平均値 $V_d$*：
   $
-    V_d = 3 / (2 pi) integral_(-pi/3)^(pi/3) sqrt(2) V_p cos theta d theta = (3 sqrt(2) V_p) / (2 pi) [sin theta]_(-pi/3)^(pi/3) = (3 sqrt(2) V_p) / (2 pi) (sqrt(3)/2 - (-sqrt(3)/2)) \\
+    V_d = 3 / (2 pi) integral_(-pi/3)^(pi/3) sqrt(2) V_p cos theta d theta = (3 sqrt(2) V_p) / (2 pi) [sin theta]_(-pi/3)^(pi/3) = (3 sqrt(2) V_p) / (2 pi) (sqrt(3)/2 - (-sqrt(3)/2)) \
     = (3 sqrt(6) V_p) / (2 pi) = (3 sqrt(6) (V_L / sqrt(3))) / (2 pi) = (3 sqrt(2) V_L) / (2 pi)
   $
 - *実効値 $V_r$*：
   $
-    V_r = sqrt(3 / (2 pi) integral_(-pi/3)^(pi/3) (sqrt(2) V_p cos theta)^2 d theta) \\
-    = sqrt((3 V_p^2) / pi integral_(-pi/3)^(pi/3) (1 + cos 2theta) / 2 d theta) \\
-    = sqrt((3 V_p^2) / pi [theta / 2 + (sin 2theta) / 4]_(-pi/3)^(pi/3)) \\
+    V_r = sqrt(3 / (2 pi) integral_(-pi/3)^(pi/3) (sqrt(2) V_p cos theta)^2 d theta)
+    = sqrt((3 V_p^2) / pi integral_(-pi/3)^(pi/3) (1 + cos 2theta) / 2 d theta) \
+    = sqrt((3 V_p^2) / pi [theta / 2 + (sin 2theta) / 4]_(-pi/3)^(pi/3))
     = sqrt(
-      (3 V_p^2) / pi ( (pi / 6 + sqrt(3) / 8) \
+      (3 V_p^2) / pi ( (pi / 6 + sqrt(3) / 8)
         - (-pi / 6 - sqrt(3) / 8) )
-    ) \\
-    = sqrt((3 V_p^2) / pi ( pi / 3 + sqrt(3) / 4 )) \\
+    ) \
+    = sqrt((3 V_p^2) / pi ( pi / 3 + sqrt(3) / 4 ))
     = V_p sqrt(1 + (3 sqrt(3)) / (4 pi)) \\
-    = (V_L / sqrt(3)) sqrt(1 + (3 sqrt(3)) / (4 pi)) \\
+    = (V_L / sqrt(3)) sqrt(1 + (3 sqrt(3)) / (4 pi))
     = sqrt(1 / 3 + sqrt(3) / (4 pi)) V_L
   $
 
@@ -404,29 +424,29 @@
   $
 - *実効値 $V_r$*：
   $
-    V_r = sqrt(3 / pi integral_(-pi/6)^(pi/6) (sqrt(2) V_L cos theta)^2 d theta) \\
-    = sqrt((6 V_L^2) / pi integral_(-pi/6)^(pi/6) (1 + cos 2theta) / 2 d theta) \\
-    = sqrt((6 V_L^2) / pi [theta / 2 + (sin 2theta) / 4]_(-pi/6)^(pi/6)) \\
+    V_r = sqrt(3 / pi integral_(-pi/6)^(pi/6) (sqrt(2) V_L cos theta)^2 d theta)
+    = sqrt((6 V_L^2) / pi integral_(-pi/6)^(pi/6) (1 + cos 2theta) / 2 d theta) \
+    = sqrt((6 V_L^2) / pi [theta / 2 + (sin 2theta) / 4]_(-pi/6)^(pi/6))
     = sqrt(
-      (6 V_L^2) / pi ( (pi / 12 + sqrt(3) / 8) \
+      (6 V_L^2) / pi ( (pi / 12 + sqrt(3) / 8)
         - (-pi / 12 - sqrt(3) / 8) )
-    ) \\
-    = sqrt((6 V_L^2) / pi ( pi / 6 + sqrt(3) / 4 )) \\
+    ) \
+    = sqrt((6 V_L^2) / pi ( pi / 6 + sqrt(3) / 4 ))
     = V_L sqrt(1 + (3 sqrt(3)) / (2 pi))
   $
 
 === (5) サイリスタ単相半波整流回路
-制御角（点弧角） $alpha$ で導通を開始し、電源電圧が負になる $pi$ で電流が遮断される。周期 is $2 pi$ である。
+制御角（点弧角） $alpha$ で導通を開始し、電源電圧が負になる $pi$ で電流が遮断される。周期 は $2 pi$ である。
 - *平均値 $V_d$*：
   $
     V_d = 1 / (2 pi) integral_alpha^pi sqrt(2) V sin theta d theta = (sqrt(2) V) / (2 pi) [-cos theta]_alpha^pi = (sqrt(2) V (1 + cos alpha)) / (2 pi)
   $
 - *実効値 $V_r$*：
   $
-    V_r = sqrt(1 / (2 pi) integral_alpha^pi (sqrt(2) V sin theta)^2 d theta) \\
-    = sqrt(V^2 / pi integral_alpha^pi (1 - cos 2theta) / 2 d theta) \\
-    = sqrt(V^2 / (2 pi) [theta - (sin 2theta) / 2]_alpha^pi) \\
-    = sqrt(V^2 / (2 pi) (pi - alpha + (sin 2alpha) / 2)) \\
+    V_r = sqrt(1 / (2 pi) integral_alpha^pi (sqrt(2) V sin theta)^2 d theta)
+    = sqrt(V^2 / pi integral_alpha^pi (1 - cos 2theta) / 2 d theta)
+    = sqrt(V^2 / (2 pi) [theta - (sin 2theta) / 2]_alpha^pi) \
+    = sqrt(V^2 / (2 pi) (pi - alpha + (sin 2alpha) / 2))
     = sqrt((pi - alpha + (sin 2alpha) / 2) / (2 pi)) V
   $
 
@@ -439,12 +459,12 @@
 - *実効値 $V_r$*：
   $
     V_r = sqrt(1 / pi integral_alpha^pi (sqrt(2) V sin theta)^2 d theta) \
-    = sqrt((2 V^2) / pi integral_alpha^pi (1 - cos 2theta) / 2 d theta) \
-    = sqrt(V^2 / pi [theta - (sin 2theta) / 2]_alpha^pi) \
+    = sqrt((2 V^2) / pi integral_alpha^pi (1 - cos 2theta) / 2 d theta)
+    = sqrt(V^2 / pi [theta - (sin 2theta) / 2]_alpha^pi)
     = sqrt((pi - alpha + (sin 2alpha) / 2) / pi) V
   $
 
-以上により、表1に示されたすべての平均値および実効値の理論式が、積分式により厳密に導出され、その妥当性が検証された。
+以上により、表1に示されたすべての平均値および実効値の理論式が、積分式により導出され、その妥当性が検証された。
 
 == 3. 実験での測定値と理論式での計算値の比較検討
 // 実験で得られた測定値（平均値、実効値）から波形率、波高率を求め、表1の理論式で得られる計算値と比較検討せよ。また、誤差の原因についても言及すること。
@@ -453,7 +473,7 @@
 === (1) 3-1 単相半波整流回路
 - *特性変化*：
   平滑コンデンサを接続しない場合（$V_"in" = 40, 50, 60 "V"$），波形率は $1.57 \sim 1.59$，波高率は $1.98 \sim 2.02$ となっている。これは理論値である波形率 $F_f = pi / 2 approx 1.57$，波高率 $F_c = 2 approx 2.00$ と非常によく一致している。
-  一方、平滑コンデンサ $C$ を接続した場合（$V_"in" = 40, 50 "V"$），波形率は $1.01$，波高率は $1.11$ 付近まで低下しており、出力電圧が非常に平滑な直流（C=∞の極限では $F_f = 1.0, F_c = 1.0$）に近付いていることが確認できる。
+  一方、平滑コンデンサ $C$ を接続した場合（$V_"in" = 40, 50 "V"$），波形率は $1.01$，波高率は $1.11$ 付近まで低下しており、出力電圧が非常に平滑な直流に近付いていることが確認できる。
 - *誤差の分析*：
   コンデンサなし時において、実測の平均値および実効値は理論値に対して $-3\%$ から $-6\%$ 程度の負の誤差を示している。これは、ダイオードの順方向電圧降下（約 $0.7" V"$）や、回路全体の配線抵抗による電圧降下、および測定用トランスの電圧低下が原因である。
 
