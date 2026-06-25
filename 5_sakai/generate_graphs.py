@@ -16,7 +16,7 @@ plt.rcParams['ytick.major.width'] = 1.0
 plt.rcParams['xtick.minor.visible'] = True   # 補助目盛りを表示
 plt.rcParams['ytick.minor.visible'] = True
 plt.rcParams['xtick.minor.width'] = 0.6      # 補助目盛りの線の太さ
-plt.rcParams['ytick.minor.width'] = 0.6
+plt.rcParams['ytick.minor.width'] = 0
 
 # グラフ出力用ディレクトリ
 AM_DIR = '5_sakai/am'
@@ -36,7 +36,7 @@ def plot_am_m_vs_Vs():
     df = pd.read_csv(csv_path, sep='\t')
     
     fig, ax = plt.subplots(figsize=(6, 4.5))
-    ax.plot(df['信号波の振幅 [mV]'], df['変調率 m'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linewidth=1.5)
+    ax.plot(df['信号波の振幅 [mV]'], df['変調率 m'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linestyle='None')
     ax.set_title('変調率 $m$ の入力電圧 $V_s$ 依存性', fontsize=12, pad=10, weight='bold')
     ax.set_xlabel('信号波の振幅 $V_s$ [mV]', fontsize=11)
     ax.set_ylabel('変調率 $m$', fontsize=11)
@@ -53,7 +53,7 @@ def plot_am_m_vs_fs():
     df = pd.read_csv(csv_path, sep='\t')
     
     fig, ax = plt.subplots(figsize=(6, 4.5))
-    ax.plot(df['周波数 [Hz]'], df['変調率 m'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linewidth=1.5)
+    ax.plot(df['周波数 [Hz]'], df['変調率 m'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linestyle='None')
     ax.set_title('変調率 $m$ の入力周波数 $f_s$ 依存性', fontsize=12, pad=10, weight='bold')
     ax.set_xlabel('入力周波数 $f_s$ [Hz] (対数軸)', fontsize=11)
     ax.set_ylabel('変調率 $m$', fontsize=11)
@@ -70,7 +70,7 @@ def plot_am_Vout_vs_Vs():
     df = pd.read_csv(csv_path, sep='\t')
     
     fig, ax = plt.subplots(figsize=(6, 4.5))
-    ax.plot(df['入力電圧 [mV]'], df['出力電圧 [V]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linewidth=1.5)
+    ax.plot(df['入力電圧 [mV]'], df['出力電圧 [V]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linestyle='None')
     ax.set_title('復調出力電圧 $V_{out}$ の入力電圧 $V_s$ 依存性', fontsize=12, pad=10, weight='bold')
     ax.set_xlabel('入力電圧 $V_s$ [mV]', fontsize=11)
     ax.set_ylabel('出力電圧 $V_{out}$ [V]', fontsize=11)
@@ -87,7 +87,7 @@ def plot_am_Vout_vs_fs():
     df = pd.read_csv(csv_path, sep='\t')
     
     fig, ax = plt.subplots(figsize=(6, 4.5))
-    ax.plot(df['周波数 [Hz]'], df['出力電圧 [V]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linewidth=1.5)
+    ax.plot(df['周波数 [Hz]'], df['出力電圧 [V]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linestyle='None')
     ax.set_title('復調出力電圧 $V_{out}$ の入力周波数 $f_s$ 依存性 (片対数)', fontsize=12, pad=10, weight='bold')
     ax.set_xlabel('周波数 $f_s$ [Hz] (対数軸)', fontsize=11)
     ax.set_ylabel('出力電圧 $V_{out}$ [V]', fontsize=11)
@@ -106,7 +106,7 @@ def plot_fm_fFM_vs_VC():
     df = pd.read_csv(csv_path, sep='\t')
     
     fig, ax = plt.subplots(figsize=(6, 4.5))
-    ax.plot(df['バイアス電圧V_c [V]'], df['周波数f_FM [kHz]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linewidth=1.5)
+    ax.plot(df['バイアス電圧V_c [V]'], df['周波数f_FM [kHz]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linestyle='None')
     ax.set_title('変調器出力周波数 $f_{FM}$ のバイアス電圧 $V_C$ 依存性', fontsize=12, pad=10, weight='bold')
     ax.set_xlabel('バイアス電圧 $V_C$ [V]', fontsize=11)
     ax.set_ylabel('変調器出力周波数 $f_{FM}$ [kHz]', fontsize=11)
@@ -121,7 +121,7 @@ def plot_fm_Vout_vs_fFM():
     df = pd.read_csv(csv_path, sep='\t')
     
     fig, ax = plt.subplots(figsize=(6, 4.5))
-    ax.plot(df['信号波の周波数 f_FM [kHz]'], df['出力電圧 V_out [V]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=4, linewidth=1.2)
+    ax.plot(df['信号波の周波数 f_FM [kHz]'], df['出力電圧 V_out [V]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=4, linestyle='None')
     
     # 15kHzから17kHzの直線部分を強調するための枠線
     ax.axvspan(15.0, 17.0, color='gray', alpha=0.15, label='検波器のS字特性の直線部 (15–17 kHz)')
@@ -141,7 +141,7 @@ def plot_fm_Vout_vs_Vs():
     df = pd.read_csv(csv_path, sep='\t')
     
     fig, ax = plt.subplots(figsize=(6, 4.5))
-    ax.plot(df['信号波の電圧 [mV]'], df['出力電圧 [mV]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linewidth=1.5)
+    ax.plot(df['信号波の電圧 [mV]'], df['出力電圧 [mV]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=6, linestyle='None')
     ax.axvline(300.0, color='red', linestyle=':', alpha=0.8, label='線形動作限界 (300 mV)')
     ax.set_title('復調出力電圧 $V_{out}$ の変調器入力電圧 $V_s$ 依存性', fontsize=12, pad=10, weight='bold')
     ax.set_xlabel('信号波の電圧 $V_s$ [mV]', fontsize=11)
@@ -160,7 +160,7 @@ def plot_fm_Vout_vs_fs():
     df = pd.read_csv(csv_path, sep='\t')
     
     fig, ax = plt.subplots(figsize=(6, 4.5))
-    ax.plot(df['信号波の周波数 [Hz]'], df['出力電圧 [mV]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=5, linewidth=1.5)
+    ax.plot(df['信号波の周波数 [Hz]'], df['出力電圧 [mV]'], marker='o', color=LINE_COLOR, markerfacecolor=MARKER_COLOR, markersize=5, linestyle='None')
     ax.set_title('復調出力電圧 $V_{out}$ の入力周波数 $f_s$ 依存性 (両対数)', fontsize=12, pad=10, weight='bold')
     ax.set_xlabel('周波数 $f_s$ [Hz] (対数軸)', fontsize=11)
     ax.set_ylabel('出力電圧 $V_{out}$ [mV] (対数軸)', fontsize=11)
