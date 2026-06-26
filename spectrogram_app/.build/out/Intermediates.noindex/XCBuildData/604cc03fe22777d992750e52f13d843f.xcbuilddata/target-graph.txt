@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Target 'AllExcludingTests' in project 'Aggregate'
+➜ Explicit dependency on target 'SpectrogramApp-product' in project 'SpectrogramApp'
+➜ Explicit dependency on target 'SpectrogramApp' in project 'SpectrogramApp'
+Target 'SpectrogramApp' in project 'SpectrogramApp' (no dependencies)
+Target 'SpectrogramApp-product' in project 'SpectrogramApp' (no dependencies)

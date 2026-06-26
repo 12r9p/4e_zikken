@@ -1,0 +1,626 @@
+[
+  {
+    "isFramework" : true,
+    "moduleName" : "Accessibility",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Accessibility-OPLKNT8NC0EH.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "AppKit",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/AppKit-2ALS53KDWD9FL.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "ColorSync",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/ColorSync-7IJ1BLNTLF7D.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "Combine",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Combine-36ERFMZ0XNDSE.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreData",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreData-2S62H5QJLP7TE.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "CoreFoundation",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreFoundation-2J063BCVFZUJ8.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreGraphics",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreGraphics-2I24SVNAL8KZK.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "CoreImage",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreImage-39C6IY94GZ6G8.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreText",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreText-2COMNZ09QNPT3.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreTransferable",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreTransferable-2OJB9VZQY67RI.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "CoreVideo",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreVideo-7TBXAQ90PM3L.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Darwin",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Darwin-ZYTR9VJLF53N.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "DataDetection",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/DataDetection-L2008FHVLRL2.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "DeveloperToolsSupport",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/DeveloperToolsSupport-156KIIM60ZJDM.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Dispatch",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Dispatch-B7F4EH0KNXY8.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "Foundation",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Foundation-6GPDAQ0KC43K.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "IOKit",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/IOKit-X0G715UXE5FP.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "ImageIO",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/ImageIO-XN2Z4TK2ZFQ5.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Metal",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Metal-1TBCQC8L1KGBZ.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "OSLog",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/OSLog-2JT6GHJJ9SV6C.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "ObjectiveC",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/ObjectiveC-3EUQF255QOAVY.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Observation",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Observation-VYCGTNQ8YLOJ.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "QuartzCore",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/QuartzCore-2HCASDIXMEJ9F.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Spatial",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Spatial-P5ZNRXZBAOKO.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "Swift",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Swift-275JTKNXN51KR.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "SwiftUICore",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/SwiftUICore-3OTSRJRB9U4MK.swiftmodule"
+  },
+  {
+    "isFramework" : true,
+    "moduleName" : "Symbols",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Symbols-1S6YMURQM1P33.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "System",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/System-224QZR1AHPRFQ.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "UniformTypeIdentifiers",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/UniformTypeIdentifiers-2GKJN90ISDT9K.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "XPC",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/XPC-1S1ZSVYWALM08.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_Builtin_float",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_float-1MNS29TVVUQHR.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_Concurrency",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Concurrency-R59M8HIYHERK.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation1",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_DarwinFoundation1-1OMEBKK7HZ6S9.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation2",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_DarwinFoundation2-3N4RP43Z7K02Z.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation3",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_DarwinFoundation3-2WDGWZES4FSM5.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "_StringProcessing",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_StringProcessing-11CWAU2MFQVK6.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "os",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/os-I6QA3VXVJFQO.swiftmodule"
+  },
+  {
+    "isFramework" : false,
+    "moduleName" : "simd",
+    "modulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/simd-KG0HR1YXRO98.swiftmodule"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/Accessibility.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Accessibility-9AEJMHBGWMCB6E4LPEF4U4K9S.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Accessibility"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/AppKit.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/AppKit-B1VN48ILDS1IN106KVO3KKE8L.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "AppKit"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/ApplicationServices.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/ApplicationServices-2Y61HFSALVVQBYASGA9RO1QXF.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ApplicationServices"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CFNetwork.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CFNetwork-BV8O4Y73DLKI2XI2FRBCVE2H4.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CFNetwork"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/cups.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CUPS-5J3LYODM8N857CAXI38G9ZIO1.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CUPS"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/ColorSync.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/ColorSync-4WXHH3XCQOARQ920EFCRPKW7O.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ColorSync"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreData.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreData-16XT1ILZIQGNLJXJ0WOMACK1J.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreData"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreFoundation.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreFoundation-1A49KZPAS6Y74WHCMS1SFWVYP.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreFoundation"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreGraphics.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreGraphics-RIXJF77RA7N4CIDJFKT8EQ44.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreGraphics"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreImage.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreImage-9O99VNB35H1FFO6V863Y3NDT8.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreImage"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreServices.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreServices-ESGHDH5SCF5Z77ISN4B4PEIOA.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreServices"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreText.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreText-NR79N57A6XBB3RY8AAC975KJ.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreText"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreTransferable.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreTransferable-43OCV9J8Z2TOCC5ZBIHOKZNXV.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreTransferable"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/CoreVideo.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/CoreVideo-UBUZAYCFLHK8OC4ZNNO9ZMNU.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "CoreVideo"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/Darwin.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Darwin-8FZRVMKK9X8A5BYO2C1H0LQYK.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Darwin"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/DataDetection.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/DataDetection-COV9LLAMMDNBVBEBEEIUE37CD.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "DataDetection"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/DeveloperToolsSupport.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/DeveloperToolsSupport-CGYJH3MWXPV53EN0Q04H1DSES.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "DeveloperToolsSupport"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/DiskArbitration.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/DiskArbitration-5RTC45RZIKK9EDQJDFAKCCGJE.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "DiskArbitration"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/dispatch.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Dispatch-6MNTUIT3BVCIBEEOIUE5BJRBM.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Dispatch"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/Foundation.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Foundation-EJ9BSMSNYL2VXXYC73KM558AU.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Foundation"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/IOKit.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/IOKit-AKYGCXJH1ZPFKS4O9KQPMINHB.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "IOKit"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/IOSurface.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/IOSurface-A5REYA283HOB9CKD60T3PU5W1.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "IOSurface"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/ImageIO.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/ImageIO-8B88ZWOZWY0XMC4KO481SEYXT.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ImageIO"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinBasic.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/MachO-6LM8363FK08Q56SD6LUU2DHBS.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "MachO"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/Metal.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Metal-1Y3205S9HOVGX3J3TYZ31L0B2.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Metal"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/OSLog.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/OSLog-2WWNCX6RV8J3J8BSMJBUYAAM4.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "OSLog"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/ObjectiveC.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/ObjectiveC-D4XV457PV9AATS6GH4PV6QMW3.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ObjectiveC"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/OpenGL.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/OpenGL-AIA26N94S177SH75COPHT0TYV.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "OpenGL"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/QuartzCore.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/QuartzCore-9FK7N5FDYRG20D7CX3PNTMNNX.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "QuartzCore"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/Security.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Security-62BR4NGVU4ODESRVLOK9FOTNY.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Security"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/Spatial\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Spatial-BDGHV72Z00GRKARVTD0A8UAX9.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Spatial"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/SwiftShims-52TCBNX71MSX5L157UH419NID.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "SwiftShims"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/SwiftUICore.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/SwiftUICore-D7R2O7WZG9IVH8ST9PZ028ZA4.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "SwiftUICore"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/Symbols.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/Symbols-AFFGKSTH2R6DPQSHHA8RP3ZXM.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "Symbols"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/System\/Library\/Frameworks\/UniformTypeIdentifiers.framework\/Modules\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/UniformTypeIdentifiers-RS4PWEYEMCT8F7SARWF2M3H8.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "UniformTypeIdentifiers"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/xpc.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/XPC-C1IX80IRY0KU7T3298WI7IDG.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "XPC"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation1.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_AvailabilityInternal-ENYYSHYQOPUDYT3VFL07VT6VS.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_AvailabilityInternal"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_float-DMV4VVBFADAU78SDXHDSVH84R.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_float"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_intrinsics-57P2YUEQYTX6WX7XJDQGG56NI.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_intrinsics"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_inttypes-F279HEG03RYH6MEX7CBPBBDCV.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_inttypes"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_limits-48GXXKFRJEUYARGBF16FEOQWU.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_limits"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_stdarg-7Z47YV3V8CXA6MPBO7210PVTC.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stdarg"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_stdatomic-7FL1Z7SSSLET12KV4191LESNS.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stdatomic"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_stdbool-1FI72E3IIH0S1RX189T64KIPN.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stdbool"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_stddef-7VOL8M1VDZBQH7JN7V6Y3DR3.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stddef"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_stdint-CIIYLNSM6OOKXW9OSM7HR7UA4.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_stdint"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_Builtin_tgmath-8AW493BSIKLBXUJ6L7U8EF5AD.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_Builtin_tgmath"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation1.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_DarwinFoundation1-15XICAMVWZR60JHS0KESVMEA2.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation1"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation2.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_DarwinFoundation2-KXAY1V4RK3Q6RI94TANRTDXY.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation2"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation3.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_DarwinFoundation3-6TMKGUL2YXU3IAKZ4VDUMLYD7.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_DarwinFoundation3"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/_SwiftConcurrencyShims-6LV21WTH453I0KNFD1PL41KHH.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "_SwiftConcurrencyShims"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/launch.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/launch-87UD197UF99XAGSVDWUWCM585.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "launch"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/libDER\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/libDER-8CWM4Z08WCI3E9YBI4HWV6DBE.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "libDER"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/libkern.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/libkern-979U5DRXQRJ1JB74VQOFC3T00.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "libkern"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/os.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/os-X1Q0KHMA4QW9A17CX4O36TYC.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "os"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/os.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/os_object-DZ5DDHDKDFT86LIUBOVCACS43.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "os_object"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/os.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/os_workgroup-9KNWBG7Z50NPISIIMXLYSPZQQ.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "os_workgroup"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/ptrauth-3NUA16SS9JAQT24JV4RAD9GNF.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ptrauth"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/usr\/lib\/clang\/21\/include\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/ptrcheck-ADY5J3PMLQTJPRGXOL9SJJRHU.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "ptrcheck"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/simd\/module.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/simd-1Z9PRTCLGFG7X5G1YTLQEZQW6.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "simd"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/c_standard_library.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/string_h-DVQZVBZTU3FQP9UKL8I3WIRML.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "string_h"
+  },
+  {
+    "clangModuleMapPath" : "\/Library\/Developer\/CommandLineTools\/SDKs\/MacOSX27.0.sdk\/usr\/include\/DarwinFoundation2.modulemap",
+    "clangModulePath" : "\/Users\/takumi\/Documents\/4e_zikken\/spectrogram_app\/.build\/out\/ModuleCache.noindex\/sys_types-B03NEF1ZP2365OGUGSTT9HUL0.pcm",
+    "isBridgingHeaderDependency" : false,
+    "isFramework" : false,
+    "moduleName" : "sys_types"
+  }
+]

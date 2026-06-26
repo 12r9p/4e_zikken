@@ -1,0 +1,11 @@
+{
+  "/Users/takumi/Documents/4e_zikken/spectrogram_app/Sources/SpectrogramApp/DataProcessor.swift" : {
+    "abi-baseline-json" : "/Users/takumi/Documents/4e_zikken/spectrogram_app/.build/out/Intermediates.noindex/SpectrogramApp.build/Release/SpectrogramApp-p.build/Objects-normal/arm64/SpectrogramApp.abi.json",
+    "const-values" : "/Users/takumi/Documents/4e_zikken/spectrogram_app/.build/out/Intermediates.noindex/SpectrogramApp.build/Release/SpectrogramApp-p.build/Objects-normal/arm64/SpectrogramApp-primary.swiftconstvalues",
+    "dependencies" : "/Users/takumi/Documents/4e_zikken/spectrogram_app/.build/out/Intermediates.noindex/SpectrogramApp.build/Release/SpectrogramApp-p.build/Objects-normal/arm64/SpectrogramApp-primary.d",
+    "diagnostics" : "/Users/takumi/Documents/4e_zikken/spectrogram_app/.build/out/Intermediates.noindex/SpectrogramApp.build/Release/SpectrogramApp-p.build/Objects-normal/arm64/SpectrogramApp-primary.dia",
+    "swiftdoc" : "/Users/takumi/Documents/4e_zikken/spectrogram_app/.build/out/Intermediates.noindex/SpectrogramApp.build/Release/SpectrogramApp-p.build/Objects-normal/arm64/SpectrogramApp.swiftdoc",
+    "swiftmodule" : "/Users/takumi/Documents/4e_zikken/spectrogram_app/.build/out/Intermediates.noindex/SpectrogramApp.build/Release/SpectrogramApp-p.build/Objects-normal/arm64/SpectrogramApp.swiftmodule",
+    "swiftsourceinfo" : "/Users/takumi/Documents/4e_zikken/spectrogram_app/.build/out/Intermediates.noindex/SpectrogramApp.build/Release/SpectrogramApp-p.build/Objects-normal/arm64/SpectrogramApp.swiftsourceinfo"
+  }
+}
