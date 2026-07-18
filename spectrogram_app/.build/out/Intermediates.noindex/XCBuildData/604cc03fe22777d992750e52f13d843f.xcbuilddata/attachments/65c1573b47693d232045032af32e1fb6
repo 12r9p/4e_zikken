@@ -1,4 +1,0 @@
-module SpectrogramApp {
-header "SpectrogramApp-Swift.h"
-export *
-}
