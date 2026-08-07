@@ -70,6 +70,13 @@ for value, label in ((90, "90"), (900, "900"), (9000, "9000"), (90000, "90000"))
     parts.append(f'<line x1="{x_pos:.1f}" y1="{top}" x2="{x_pos:.1f}" y2="{bottom}" stroke="#d0d0d0" stroke-width="1"/>')
     parts.append(text(x_pos, bottom + 27, label))
 
+phase_zero_y = y_phase(0)
+parts.extend([
+    f'<line x1="{left}" y1="{phase_zero_y:.1f}" x2="{right}" y2="{phase_zero_y:.1f}" stroke="#e56f2e" stroke-width="1.5" stroke-dasharray="6 4"/>',
+    f'<rect x="{right - 34}" y="{phase_zero_y - 17:.1f}" width="30" height="18" fill="white" opacity="0.92"/>',
+    f'<text class="small phase" x="{right - 8}" y="{phase_zero_y - 4:.1f}" text-anchor="end">0°</text>',
+])
+
 mark_x = x(3400)
 parts.extend([
     f'<line x1="{mark_x:.1f}" y1="{top}" x2="{mark_x:.1f}" y2="{bottom}" stroke="#6a6a6a" stroke-width="1.5" stroke-dasharray="6 4"/>',

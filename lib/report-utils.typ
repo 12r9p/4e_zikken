@@ -7,7 +7,7 @@
   seriffont_cjk: "Harano Aji Mincho",
   sansfont_cjk: "Harano Aji Gothic",
   paper: "a4",
-  margin: 14mm,
+  margin: 12mm,
 ) = {
   show: js.with(
     lang: lang,
@@ -34,7 +34,7 @@
   )
 
   show heading: it => {
-    v(1.5em, weak: false)
+    v(0.5em, weak: false)
     it
   }
 

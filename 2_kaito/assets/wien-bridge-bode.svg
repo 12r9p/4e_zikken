@@ -44,6 +44,9 @@
 <text class="" x="583.3" y="465.0" text-anchor="middle">9000</text>
 <line x1="820.0" y1="38" x2="820.0" y2="438" stroke="#d0d0d0" stroke-width="1"/>
 <text class="" x="820.0" y="465.0" text-anchor="middle">90000</text>
+<line x1="110" y1="238.0" x2="820" y2="238.0" stroke="#e56f2e" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="786" y="221.0" width="30" height="18" fill="white" opacity="0.92"/>
+<text class="small phase" x="812" y="234.0" text-anchor="end">0°</text>
 <line x1="483.3" y1="38" x2="483.3" y2="438" stroke="#6a6a6a" stroke-width="1.5" stroke-dasharray="6 4"/>
 <rect x="454.3" y="46" width="58" height="20" fill="white" opacity="0.92"/>
 <text class="small" x="483.3" y="61.0" text-anchor="middle">3.4 kHz</text>
