@@ -20,7 +20,7 @@
   作成者： 佐藤 匠
 ])
 #align(left, [
-  作成日： #datetime.today().display("[year]年[month]月[day]日")
+  作成日： 2026年8月7日
 ])
 #align(left, [
   実験日： #date
