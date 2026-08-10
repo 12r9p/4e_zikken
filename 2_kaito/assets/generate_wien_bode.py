@@ -75,18 +75,16 @@ peak_beta = 0.324
 peak_beta_y = y_beta(peak_beta)
 parts.extend([
     f'<line x1="{left}" y1="{phase_zero_y:.1f}" x2="{right}" y2="{phase_zero_y:.1f}" stroke="#e56f2e" stroke-width="1.5" stroke-dasharray="6 4"/>',
-    f'<rect x="{right - 34}" y="{phase_zero_y - 17:.1f}" width="30" height="18" fill="white" opacity="0.92"/>',
-    f'<text class="small phase" x="{right - 8}" y="{phase_zero_y - 4:.1f}" text-anchor="end">0°</text>',
     f'<line x1="{left}" y1="{peak_beta_y:.1f}" x2="{right}" y2="{peak_beta_y:.1f}" stroke="#176a8d" stroke-width="1.5" stroke-dasharray="6 4"/>',
-    f'<rect x="{left + 4}" y="{peak_beta_y - 17:.1f}" width="42" height="18" fill="white" opacity="0.92"/>',
-    f'<text class="small beta" x="{left + 8}" y="{peak_beta_y - 4:.1f}" text-anchor="start">0.324</text>',
+    f'<line x1="{left - 5}" y1="{peak_beta_y:.1f}" x2="{left}" y2="{peak_beta_y:.1f}" stroke="#176a8d" stroke-width="1"/>',
+    text(left - 14, peak_beta_y + 5, "0.324", "end", "small beta"),
 ])
 
 mark_x = x(3400)
 parts.extend([
     f'<line x1="{mark_x:.1f}" y1="{top}" x2="{mark_x:.1f}" y2="{bottom}" stroke="#6a6a6a" stroke-width="1.5" stroke-dasharray="6 4"/>',
     f'<rect x="{mark_x - 29:.1f}" y="{bottom + 8}" width="58" height="20" fill="white" opacity="0.92"/>',
-    text(mark_x, bottom + 23, "3.4 kHz", klass="small"),
+    text(mark_x, bottom + 23, "3400 Hz", klass="small"),
 ])
 
 for freq, value in zip(frequency, feedback):

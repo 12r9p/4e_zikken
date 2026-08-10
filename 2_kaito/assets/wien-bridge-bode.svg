@@ -45,14 +45,12 @@
 <line x1="820.0" y1="38" x2="820.0" y2="438" stroke="#d0d0d0" stroke-width="1"/>
 <text class="" x="820.0" y="465.0" text-anchor="middle">90000</text>
 <line x1="110" y1="238.0" x2="820" y2="238.0" stroke="#e56f2e" stroke-width="1.5" stroke-dasharray="6 4"/>
-<rect x="786" y="221.0" width="30" height="18" fill="white" opacity="0.92"/>
-<text class="small phase" x="812" y="234.0" text-anchor="end">0°</text>
 <line x1="110" y1="67.7" x2="820" y2="67.7" stroke="#176a8d" stroke-width="1.5" stroke-dasharray="6 4"/>
-<rect x="114" y="50.7" width="42" height="18" fill="white" opacity="0.92"/>
-<text class="small beta" x="118" y="63.7" text-anchor="start">0.324</text>
+<line x1="105" y1="67.7" x2="110" y2="67.7" stroke="#176a8d" stroke-width="1"/>
+<text class="small beta" x="96.0" y="72.7" text-anchor="end">0.324</text>
 <line x1="483.3" y1="38" x2="483.3" y2="438" stroke="#6a6a6a" stroke-width="1.5" stroke-dasharray="6 4"/>
 <rect x="454.3" y="446" width="58" height="20" fill="white" opacity="0.92"/>
-<text class="small" x="483.3" y="461.0" text-anchor="middle">3.4 kHz</text>
+<text class="small" x="483.3" y="461.0" text-anchor="middle">3400 Hz</text>
 <circle cx="120.8" cy="403.7" r="4.7" fill="#176a8d"/>
 <circle cx="154.7" cy="392.3" r="4.7" fill="#176a8d"/>
 <circle cx="187.9" cy="371.7" r="4.7" fill="#176a8d"/>
