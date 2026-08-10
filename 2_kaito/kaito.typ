@@ -15,13 +15,13 @@
   "assets/figures/10_ハートレー型発振回路.svg": "assets/ハートレー型発振回路.jpeg",
   "assets/figures/11_ハートレー型交流等価回路1.svg": "assets/ハートレー型発振回路の交流等価回路1.jpeg",
   "assets/figures/12_ハートレー型交流等価回路2.svg": "assets/ハートレー型発振回路の交流等価回路2.jpeg",
-  "assets/figures/13_ハートレー型交流等価回路3.svg": "assets/ハートレー型発振回路の交流等価回路2.jpeg",
+  "assets/figures/13_ハートレー型交流等価回路3.svg": "assets/ハートレー型発振回路の交流等価回路3.jpeg",
   "assets/figures/14_コルピッツ型発振回路.svg": "assets/コルピッツ型発振回路.jpeg",
   "assets/figures/15_コルピッツ型交流等価回路1.svg": "assets/コルピッツ型発振回路の交流等価回路1.jpeg",
   "assets/figures/16_コルピッツ型交流等価回路2.svg": "assets/コルピッツ型発振回路の交流等価回路2.jpeg",
-  "assets/figures/17_コルピッツ型交流等価回路3.svg": "assets/コルピッツ型発振回路の交流等価回路2.jpeg",
+  "assets/figures/17_コルピッツ型交流等価回路3.svg": "assets/コルピッツ型発振回路の交流等価回路3.jpeg",
   "assets/figures/18_ターマン型発振回路の帰還回路.svg": "assets/ターマン型発振回路の帰還回路.jpeg",
-  "assets/figures/19_ウィーンブリッジ回路.svg": "assets/JPEG画像-4FBF-9474-1D-0.jpeg",
+  "assets/figures/19_ウィーンブリッジ回路.svg": "assets/ウィーンブリッジ回路.jpeg",
   "assets/figures/20_ウィーンブリッジ増幅回路.svg": "assets/ウィーンブリッジ発振回路の増幅回路部.jpeg",
   "assets/figures/21_ハートレー型発振回路の実験回路.svg": "assets/ハートレー型発振回路の実験回路.jpeg",
   "assets/figures/22_コルピッツ型発振回路の実験回路.svg": "assets/コルピッツ型発振回路の実験回路.jpeg",
@@ -33,8 +33,8 @@
   feedback: 36%,
   ce-circuit: 40%, ce-ac: 65%, ce-hparam: 105%,
   cb-circuit: 42%, cb-ac: 50%, cb-hparam: 75%,
-  hartley: 52%, hartley-ac1: 56%, hartley-ac2: 45%,
-  colpitts: 52%, colpitts-ac1: 45%, colpitts-ac2: 45%,
+  hartley: 52%, hartley-ac1: 56%, hartley-ac2: 45%, hartley-ac3: 25%,
+  colpitts: 52%, colpitts-ac1: 45%, colpitts-ac2: 45%, colpitts-ac3: 25%,
   wien-feedback: 45%, wien-bridge: 55%, wien-amplifier: 35%,
   hartley-experiment: 54%, colpitts-experiment: 54%, wien-experiment: 64%,
   wien-feedback-measurement: 52%,
@@ -186,7 +186,7 @@ $ A_v = v_o / v_i = (h_("fe") / h_("ie")) R_C $
   figure_report(path: "assets/figures/11_ハートレー型交流等価回路1.svg", caption: [ハートレー型の交流等価回路 1], label-name: "fig-hartley-ac1", width: figure-widths.at("hartley-ac1")),
   figure_report(path: "assets/figures/12_ハートレー型交流等価回路2.svg", caption: [ハートレー型の交流等価回路 2], label-name: "fig-hartley-ac2", width: figure-widths.at("hartley-ac2")),
 )
-/*変形途中を追加したからファイルの名前見て画像を置いて*/
+#figure_report(path: "assets/figures/13_ハートレー型交流等価回路3.svg", caption: [ハートレー型の交流等価回路 3], label-name: "fig-hartley-ac3", width: figure-widths.at("hartley-ac3"))
 
 $ f_0 = 1 / (2 pi sqrt(L C)) $
 
@@ -202,7 +202,7 @@ $ f_0 = 1 / (2 pi sqrt(L C)) $
   figure_report(path: "assets/figures/15_コルピッツ型交流等価回路1.svg", caption: [コルピッツ型の交流等価回路 1], label-name: "fig-colpitts-ac1", width: figure-widths.at("colpitts-ac1")),
   figure_report(path: "assets/figures/16_コルピッツ型交流等価回路2.svg", caption: [コルピッツ型の交流等価回路 2], label-name: "fig-colpitts-ac2", width: figure-widths.at("colpitts-ac2")),
 )
-/*変形途中を追加したからファイルの名前見て画像を置いて*/
+#figure_report(path: "assets/figures/17_コルピッツ型交流等価回路3.svg", caption: [コルピッツ型の交流等価回路 3], label-name: "fig-colpitts-ac3", width: figure-widths.at("colpitts-ac3"))
 
 二つのコンデンサを $C_2$、$C_3$ とすると、共振に寄与する合成容量は $C_("eq")=C_2 C_3/(C_2+C_3)$ である。したがって、共振周波数は
 
@@ -213,7 +213,13 @@ $ f_0 = 1 / (2 pi sqrt(L C_("eq"))) $
 コルピッツ型ではコンデンサ分圧で帰還電圧を得る点が、コイル分割を用いるハートレー型と異なる。
 
 == (4) ウィーンブリッジ発振回路の帰還率と平衡条件
-ターマン型発振回路の帰還回路を図 @fig-wien-feedback に示す。$Z_1=1/(1/R_1+j omega C_1)$、$Z_2=R_2+1/(j omega C_2)$ とおくと、分圧則より帰還率は
+ターマン型発振回路の帰還回路を図 @fig-wien-feedback に示す。
+
+#figure_report(path: "assets/figures/18_ターマン型発振回路の帰還回路.svg", caption: [ターマン型発振回路の帰還回路], label-name: "fig-wien-feedback", width: figure-widths.at("wien-feedback"))
+
+$Z_1=1/(1/R_1+j omega C_1)$、$Z_2=R_2+1/(j omega C_2)$とおくと、分圧則より帰還率は
+
+
 
 $ beta = Z_1 / (Z_1 + Z_2) $
 
@@ -223,17 +229,21 @@ $ beta = 1 / (1 + R_2/R_1 + C_1/C_2 + j (omega C_1 R_2 - 1/(omega C_2 R_1))) $
 
 である。
 
-#figure_report(path: "assets/figures/18_ターマン型発振回路の帰還回路.svg", caption: [ターマン型発振回路の帰還回路], label-name: "fig-wien-feedback", width: figure-widths.at("wien-feedback"))
-
 ウィーンブリッジ回路を図 @fig-wien-bridge に示す。
-/*この回路ってファイル間違えてない？*/
+
+#figure_report(path: "assets/figures/19_ウィーンブリッジ回路.svg", caption: [ウィーンブリッジ回路], label-name: "fig-wien-bridge", width: figure-widths.at("wien-bridge"))
 
 平衡条件より、
 
 $ Z_1 R_4 = Z_2 R_3 $
 
-である。$Z_1$ および $Z_2$ を代入して整理すると、
-/*この整理としてまとめられている式変形も書いて*/
+である。$Z_1$ および $Z_2$ を代入すると、
+
+$ R_4 / R_3 = Z_2 / Z_1 $
+
+$ = (R_2 + 1 / (j omega C_2)) (1 / R_1 + j omega C_1) $
+
+となる。これを展開して整理すると、
 
 $ R_4 / R_3 = R_2 / R_1 + C_1 / C_2 + j (omega C_1 R_2 - 1 / (omega C_2 R_1)) $
 
@@ -248,8 +258,6 @@ $ omega_0^2 = 1 / (R_1 R_2 C_1 C_2) $
 $ f_0 = 1 / (2 pi sqrt(R_1 R_2 C_1 C_2)) $
 
 を得る。また、虚部が 0 のときの実部から $R_4/R_3=R_2/R_1+C_1/C_2$ となる。特に $R_1=R_2=R$、$C_1=C_2=C$ のとき、$f_0=1/(2 pi R C)$、$R_4/R_3=2$ であり、帰還率は $beta=1/3$ となる。
-
-#figure_report(path: "assets/figures/19_ウィーンブリッジ回路.svg", caption: [ウィーンブリッジ回路], label-name: "fig-wien-bridge", width: figure-widths.at("wien-bridge"))
 
 図 @fig-wien-amplifier に示す非反転増幅回路では、
 
@@ -291,7 +299,6 @@ $ C_("open") = 38.2 "pF" $
   caption: [ハートレー型発振回路の測定結果と補正後の誤差率],
 )
 #set text(size: 10pt)
-/*発振電圧と実効値を消す*/
 
 表 3 では誤差率がほとんど一桁になった。これらは誤差の範囲内であると言える。このことから、表 2 で誤差率が大きくなった理由はコイルとトランジスタによる静電容量による影響があったということが確認できた。
 
@@ -306,7 +313,7 @@ $ f_0 = 1 / (2 pi sqrt(L ((C_1C_3)/(C_1+C_3)))) $
 
 #set text(size: 7.5pt)
 #csv_table(
-  path: "../2_kaito/assets/コルピッツ型発振回路の測定結果と誤差率.csv",
+  path: "../2_kaito/assets/ルピッツ型発振回路の測定結果と誤差率.csv",
   delimiter: "\t",
   caption: [コルピッツ型発振回路の測定結果と誤差率],
 )
@@ -322,8 +329,15 @@ $ f_0 = 1 / (2 pi sqrt(L_2 ((C_1C_3) / (C_1 + C_3) + C_("open")))) $
 
 $ C_("open") = 1 / ((2 pi f_0)^2 L_2) - (C_1C_3) / (C_1 + C_3) $
 
-となる。各測定値から求めた $C_("open")$ は 5.0 pF から 35.1 pF の範囲であり、その平均値は 21.5 pF であった。測定ごとの誤差の影響を小さくするため、この平均値を用いて理論周波数を補正した結果を表 5 に示す。
-/*copenの表を作成して説明すること*/
+となる。各測定値から求めた $C_("open")$ は表 5 に示すように 5.0 pF から 35.1 pF の範囲であり、その平均値は 21.5 pF であった。測定ごとの誤差の影響を小さくするため、この平均値を用いて理論周波数を補正した結果を表 6 に示す。
+
+#set text(size: 7.5pt)
+#csv_table(
+  path: "../2_kaito/assets/コルピッツ型発振回路の寄生容量.csv",
+  delimiter: "\t",
+  caption: [コルピッツ型発振回路で各測定値から求めた寄生容量],
+)
+#set text(size: 10pt)
 
 #set text(size: 7.5pt)
 #csv_table(
@@ -332,44 +346,39 @@ $ C_("open") = 1 / ((2 pi f_0)^2 L_2) - (C_1C_3) / (C_1 + C_3) $
   caption: [コルピッツ型発振回路の測定結果と補正後の誤差率],
 )
 #set text(size: 10pt)
-/*発振電圧と実効値を消す*/
 
-表 5 より、補正後の誤差率をみると、ほとんどが 1 桁になっているため、誤差の範囲内であるといえる。
+表 6 より、補正後の誤差率をみると、ほとんどが 1 桁になっているため、誤差の範囲内であるといえる。
 48.2 pF および 98.9 pF では補正後も誤差が比較的大きいが、これらは設定容量に対する $C_("open")$ の割合が大きく、個々の測定から求めた寄生容量の変化の影響を受けやすいためと考えられる。
-このことより、表4の誤差の主因はコイルとトランジスタによる静電容量であったと判断できる。
+このことより、表 4 の誤差の主因はコイルとトランジスタによる静電容量であったと判断できる。
 
 == (3) ウィーンブリッジ発振回路
-ウィーンブリッジ発振回路の実験回路を図 @fig-wien-experiment に示す。また、帰還回路の周波数特性を測定するための接続を図 @fig-wien-feedback-measurement に示す。帰還回路の周波数特性を測定して得たボード線図を図 @fig-bode に示す。
-
-#figure(
-  image("assets/wien-bridge-bode.svg", width: figure-widths.at("bode")),
-  caption: [ウィーンブリッジ帰還回路のボード線図。点は測定値、破線は位相差 0° を示す。],
-) <fig-bode>
-/*グラフについてです。点線で示している周波数の数値は下辺に書き込むこと。そして期間率も数値を左辺に書き込むこと。帰還率の点線を作ること。*/
-
-図 @fig-bode より、位相差は 3.30 kHz で 0° となり、帰還率はこの近傍で最大となった。設計値 $f_0=3.34 "kHz"$ に対して、位相差が 0° となった実測周波数は 3.30 kHz であった。したがって誤差率は 1 % である。
-誤差率は1桁になっているため誤差の範囲内であると言える。
-なお、離散的な測定点の中で最大帰還率 $beta=0.324$ が得られたのは 3.4 kHz であった。
-近傍の測定分解能および電圧読取りのばらつきによる差とみなせる。
+ウィーンブリッジ発振回路の実験回路を図 @fig-wien-feedback-measurement に示す。
+帰還回路の周波数特性を測定して得たボード線図を図 @fig-bode に示す。
 
 
-
-表 6 より、2 回の測定でともに 3.33 kHz の発振を得た。理論値 3.34 kHz に対する誤差率は 0.3 % である。上で求めた増幅率 $A=3.04$ と、測定した帰還率 $beta=0.323$ より、
-
-$ A beta = 3.04 times 0.323 = 0.982 $
-
-となる。$A beta$ 理想値 1 からの差は 1.8 % であり、測定値の丸め、周波数による増幅率の変化および電圧測定の不確かさを考慮すれば、発振条件をほぼ満たしていたと判断できる。
-
-#figure_report(path: "assets/figures/23_ウィーンブリッジ発振回路の実験回路.svg", caption: [ウィーンブリッジ発振回路の実験回路], label-name: "fig-wien-experiment", width: figure-widths.at("wien-experiment"))
-
-次に、ウィーンブリッジ発振回路の実験回路を、図 @fig-wien-feedback-measurement に示す。
 
 #figure(
   image("assets/ウィーンブリッジ発振器用帰還回路の実験回路.jpeg", width: figure-widths.at("wien-feedback-measurement")),
-  caption: [ウィーンブリッジ発振器用帰還回路の測定接続],
+  caption: [ウィーンブリッジ発振器用帰還回路の実験回路],
 ) <fig-wien-feedback-measurement>
 
-可変抵抗 $R_4=20.36 "kΩ"$ に設定し、増幅率を上昇させて発振を開始したときの周波数を表 6 に示す。
+#figure(
+  image("assets/wien-bridge-bode.svg", width: figure-widths.at("bode")),
+  caption: [ウィーンブリッジ帰還回路のボード線図。点は測定値、破線は位相差 0° および最大帰還率を示す。],
+) <fig-bode>
+/*数値がいい感じですが右辺左辺の数字がグラフの中に書かれているのが気になる。0度は書く必要ないでしょう。0.324はメモリと同じ場所に書いてください*/
+
+図 @fig-bode より、位相差は 3.30 kHz で 0° となり、帰還率はこの近傍で最大となった。設計値 $f_0=3.34 "kHz"$ に対して、位相差が 0° となった実測周波数は 3.30 kHz であり、誤差率は 1.2 % である。誤差率は 1 桁であるため、誤差の範囲内であるといえる。なお、離散的な測定点の中で最大帰還率 $beta=0.324$ が得られたのは 3.4 kHz であった。これは近傍の測定分解能および電圧読取りのばらつきによる差とみなせる。
+
+\
+
+次に、ウィーンブリッジ発振回路の実験回路を、図 @fig-wien-experiment に示す。
+
+#figure_report(path: "assets/figures/23_ウィーンブリッジ発振回路の実験回路.svg", caption: [ウィーンブリッジ発振回路の実験回路], label-name: "fig-wien-experiment", width: figure-widths.at("wien-experiment"))
+
+
+
+可変抵抗 $R_4=20.36 "kΩ"$ に設定し、増幅率を上昇させて発振を開始したときの周波数を表 7 に示す。
 
 #figure(
   table(
@@ -392,8 +401,20 @@ $ A beta = 3.04 times 0.323 = 0.982 $
 
 $ f_0 = 1 / (2 pi sqrt(C_1 C_2 R_1 R_2)) = 3.34 "kHz" $
 
-である。また、抵抗の実測値 $R_3=9.99 "kΩ"$、$R_4=20.41 "kΩ"$ を用いると、増幅率は
+である。
 
-$ A = 1 + R_4 / R_3 = 1 + 20.41 / 9.99 = 3.04 $
+/*有効桁数に注意しながら誤差率を計算*/
+
+また、抵抗の実測値 $R_3=9.99 "kΩ"$、$R_4=20.41 "kΩ"$ を用いると、増幅率は
+
+ $ A = 1 + R_4 / R_3 = 1 + 20.41 / 9.99 = 3.04 $
 
 となる。
+
+/*原理(4)からも、電圧増幅率 A を求める*/
+
+表 7 より、2 回の測定でともに 3.33 kHz の発振を得た。理論値 3.34 kHz に対する誤差率は 0.3 % である。上で求めた増幅率 $A=3.04$ と、測定した帰還率 $beta=0.323$ より、
+
+$ A beta = 3.04 times 0.323 = 0.982 $
+
+となる。$A beta$ の理想値 1 からの差は 1.8 % であり、測定値の丸め、周波数による増幅率の変化および電圧測定の不確かさを考慮すれば、発振条件をほぼ満たしていたと判断できる。
