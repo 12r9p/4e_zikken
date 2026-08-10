@@ -33,8 +33,8 @@
   feedback: 36%,
   ce-circuit: 40%, ce-ac: 65%, ce-hparam: 105%,
   cb-circuit: 42%, cb-ac: 50%, cb-hparam: 75%,
-  hartley: 52%, hartley-ac1: 56%, hartley-ac2: 45%, hartley-ac3: 25%,
-  colpitts: 52%, colpitts-ac1: 45%, colpitts-ac2: 45%, colpitts-ac3: 25%,
+  hartley: 52%, hartley-ac1: 56%, hartley-ac2: 65%, hartley-ac3: 25%,
+  colpitts: 52%, colpitts-ac1: 45%, colpitts-ac2: 65%, colpitts-ac3: 25%,
   wien-feedback: 45%, wien-bridge: 55%, wien-amplifier: 35%,
   hartley-experiment: 54%, colpitts-experiment: 54%, wien-experiment: 64%,
   wien-feedback-measurement: 42%,
@@ -425,21 +425,21 @@ $ (3.34 - 3.33) / 3.34 times 100 = 0.299 ... % approx 0.3 % $
  $ A = 1 + R_4 / R_3 = 1 + 20.41 / 9.99 = 3.04 $
 
 となる。
+
 原理の (4) より、発振条件を満たすために必要な電圧増幅率は、
 
 $ A = 1 + R_4 / R_3 = 1 + R_2 / R_1 + C_1 / C_2  = 1 + 0.992 / 1.01 + 48.7 / 46.7 = 3.03 $
 
-と求められる。
+と求められる
+
 誤差率は
 
 $ (3.04 - 3.03) / 3.03 times 100 = 0.330 ... % approx 0.3 % $
 
 となり、誤差率は 1 桁になっているため、誤差の範囲内であるといえる。
 
-表 7 より、2 回の測定でともに 3.33 kHz の発振を得た。理論値 3.34 kHz に対する誤差率は 0.3 % である。
-
 また、測定した帰還率 $beta=0.324$ より、
 
 $ A beta = 3.04 times 0.324 = 0.985 $
 
-となる。$A beta$ の理想値 1 からの差は 1.5 % であり、測定値の丸め、読み取り時の誤差によるものだと考えられる。したがって、発振条件を満たしているといえる。
+となる。$A beta$ の理想値 1 からの誤差率は 1.5 % であり2桁になっているが、測定値の丸め、読み取り時の誤差によるものだと考えられる。
