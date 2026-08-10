@@ -60,7 +60,7 @@
 
 #let title = "発振回路"
 #let date = "7月10,17,22日"
-#let weather = "記録なし"
+#let weather = "晴れ　室温23.7℃ 湿度68%"
 #let place = "電気機械実験室"
 #let teacher = "皆藤 新一 教員"
 
@@ -75,6 +75,7 @@
 
 実験日：#date \
 
+天気：#weather \
 
 実験場所：#place \
 
@@ -185,7 +186,7 @@ $ A_v = v_o / v_i = (h_("fe") / h_("ie")) R_C $
   figure_report(path: "assets/figures/11_ハートレー型交流等価回路1.svg", caption: [ハートレー型の交流等価回路 1], label-name: "fig-hartley-ac1", width: figure-widths.at("hartley-ac1")),
   figure_report(path: "assets/figures/12_ハートレー型交流等価回路2.svg", caption: [ハートレー型の交流等価回路 2], label-name: "fig-hartley-ac2", width: figure-widths.at("hartley-ac2")),
 )
-
+/*変形途中を追加したからファイルの名前見て画像を置いて*/
 
 $ f_0 = 1 / (2 pi sqrt(L C)) $
 
@@ -201,6 +202,7 @@ $ f_0 = 1 / (2 pi sqrt(L C)) $
   figure_report(path: "assets/figures/15_コルピッツ型交流等価回路1.svg", caption: [コルピッツ型の交流等価回路 1], label-name: "fig-colpitts-ac1", width: figure-widths.at("colpitts-ac1")),
   figure_report(path: "assets/figures/16_コルピッツ型交流等価回路2.svg", caption: [コルピッツ型の交流等価回路 2], label-name: "fig-colpitts-ac2", width: figure-widths.at("colpitts-ac2")),
 )
+/*変形途中を追加したからファイルの名前見て画像を置いて*/
 
 二つのコンデンサを $C_2$、$C_3$ とすると、共振に寄与する合成容量は $C_("eq")=C_2 C_3/(C_2+C_3)$ である。したがって、共振周波数は
 
@@ -224,12 +226,14 @@ $ beta = 1 / (1 + R_2/R_1 + C_1/C_2 + j (omega C_1 R_2 - 1/(omega C_2 R_1))) $
 #figure_report(path: "assets/figures/18_ターマン型発振回路の帰還回路.svg", caption: [ターマン型発振回路の帰還回路], label-name: "fig-wien-feedback", width: figure-widths.at("wien-feedback"))
 
 ウィーンブリッジ回路を図 @fig-wien-bridge に示す。
+/*この回路ってファイル間違えてない？*/
 
 平衡条件より、
 
 $ Z_1 R_4 = Z_2 R_3 $
 
 である。$Z_1$ および $Z_2$ を代入して整理すると、
+/*この整理としてまとめられている式変形も書いて*/
 
 $ R_4 / R_3 = R_2 / R_1 + C_1 / C_2 + j (omega C_1 R_2 - 1 / (omega C_2 R_1)) $
 
@@ -287,8 +291,9 @@ $ C_("open") = 38.2 "pF" $
   caption: [ハートレー型発振回路の測定結果と補正後の誤差率],
 )
 #set text(size: 10pt)
+/*発振電圧と実効値を消す*/
 
-表 3 では誤差率が 1 % から 3.2 % に低下した。このことから、表 2 で小容量側の誤差が大きくなった主因は寄生容量であったと判断できる。最小容量で2桁の誤差が残ったのは、寄生容量を一定値と近似したこと、コイルの損失および測定器の負荷の影響によると考えられる。
+表 3 では誤差率がほとんど一桁になった。これらは誤差の範囲内であると言える。このことから、表 2 で誤差率が大きくなった理由はコイルとトランジスタによる静電容量による影響があったということが確認できた。
 
 == (2) コルピッツ型発振回路
 コルピッツ型発振回路の実験回路を図 @fig-colpitts-experiment に示す。発振周波数の理論式は
@@ -301,7 +306,7 @@ $ f_0 = 1 / (2 pi sqrt(L ((C_1C_3)/(C_1+C_3)))) $
 
 #set text(size: 7.5pt)
 #csv_table(
-  path: "../2_kaito/assets/ルピッツ型発振回路の測定結果と誤差率.csv",
+  path: "../2_kaito/assets/コルピッツ型発振回路の測定結果と誤差率.csv",
   delimiter: "\t",
   caption: [コルピッツ型発振回路の測定結果と誤差率],
 )
@@ -318,6 +323,7 @@ $ f_0 = 1 / (2 pi sqrt(L_2 ((C_1C_3) / (C_1 + C_3) + C_("open")))) $
 $ C_("open") = 1 / ((2 pi f_0)^2 L_2) - (C_1C_3) / (C_1 + C_3) $
 
 となる。各測定値から求めた $C_("open")$ は 5.0 pF から 35.1 pF の範囲であり、その平均値は 21.5 pF であった。測定ごとの誤差の影響を小さくするため、この平均値を用いて理論周波数を補正した結果を表 5 に示す。
+/*copenの表を作成して説明すること*/
 
 #set text(size: 7.5pt)
 #csv_table(
@@ -326,15 +332,42 @@ $ C_("open") = 1 / ((2 pi f_0)^2 L_2) - (C_1C_3) / (C_1 + C_3) $
   caption: [コルピッツ型発振回路の測定結果と補正後の誤差率],
 )
 #set text(size: 10pt)
+/*発振電圧と実効値を消す*/
 
 表 5 より、補正後の誤差率をみると、ほとんどが 1 桁になっているため、誤差の範囲内であるといえる。
-48.2 pF および 98.9 pF では補正後も誤差が比較的大きいが、これらは設定容量に対する $C_("open")$ の割合が大きく、個々の測定から求めた寄生容量のばらつきの影響を受けやすいためと考えられる。
+48.2 pF および 98.9 pF では補正後も誤差が比較的大きいが、これらは設定容量に対する $C_("open")$ の割合が大きく、個々の測定から求めた寄生容量の変化の影響を受けやすいためと考えられる。
 このことより、表4の誤差の主因はコイルとトランジスタによる静電容量であったと判断できる。
 
 == (3) ウィーンブリッジ発振回路
 ウィーンブリッジ発振回路の実験回路を図 @fig-wien-experiment に示す。また、帰還回路の周波数特性を測定するための接続を図 @fig-wien-feedback-measurement に示す。帰還回路の周波数特性を測定して得たボード線図を図 @fig-bode に示す。
 
+#figure(
+  image("assets/wien-bridge-bode.svg", width: figure-widths.at("bode")),
+  caption: [ウィーンブリッジ帰還回路のボード線図。点は測定値、破線は位相差 0° を示す。],
+) <fig-bode>
+/*グラフについてです。点線で示している周波数の数値は下辺に書き込むこと。そして期間率も数値を左辺に書き込むこと。帰還率の点線を作ること。*/
+
+図 @fig-bode より、位相差は 3.30 kHz で 0° となり、帰還率はこの近傍で最大となった。設計値 $f_0=3.34 "kHz"$ に対して、位相差が 0° となった実測周波数は 3.30 kHz であった。したがって誤差率は 1 % である。
+誤差率は1桁になっているため誤差の範囲内であると言える。
+なお、離散的な測定点の中で最大帰還率 $beta=0.324$ が得られたのは 3.4 kHz であった。
+近傍の測定分解能および電圧読取りのばらつきによる差とみなせる。
+
+
+
+表 6 より、2 回の測定でともに 3.33 kHz の発振を得た。理論値 3.34 kHz に対する誤差率は 0.3 % である。上で求めた増幅率 $A=3.04$ と、測定した帰還率 $beta=0.323$ より、
+
+$ A beta = 3.04 times 0.323 = 0.982 $
+
+となる。$A beta$ 理想値 1 からの差は 1.8 % であり、測定値の丸め、周波数による増幅率の変化および電圧測定の不確かさを考慮すれば、発振条件をほぼ満たしていたと判断できる。
+
 #figure_report(path: "assets/figures/23_ウィーンブリッジ発振回路の実験回路.svg", caption: [ウィーンブリッジ発振回路の実験回路], label-name: "fig-wien-experiment", width: figure-widths.at("wien-experiment"))
+
+次に、ウィーンブリッジ発振回路の実験回路を、図 @fig-wien-feedback-measurement に示す。
+
+#figure(
+  image("assets/ウィーンブリッジ発振器用帰還回路の実験回路.jpeg", width: figure-widths.at("wien-feedback-measurement")),
+  caption: [ウィーンブリッジ発振器用帰還回路の測定接続],
+) <fig-wien-feedback-measurement>
 
 可変抵抗 $R_4=20.36 "kΩ"$ に設定し、増幅率を上昇させて発振を開始したときの周波数を表 6 に示す。
 
@@ -364,25 +397,3 @@ $ f_0 = 1 / (2 pi sqrt(C_1 C_2 R_1 R_2)) = 3.34 "kHz" $
 $ A = 1 + R_4 / R_3 = 1 + 20.41 / 9.99 = 3.04 $
 
 となる。
-
-#figure(
-  image("assets/ウィーンブリッジ発振器用帰還回路の実験回路.jpeg", width: figure-widths.at("wien-feedback-measurement")),
-  caption: [ウィーンブリッジ発振器用帰還回路の測定接続],
-) <fig-wien-feedback-measurement>
-#figure(
-  image("assets/wien-bridge-bode.svg", width: figure-widths.at("bode")),
-  caption: [ウィーンブリッジ帰還回路のボード線図。点は測定値、破線は位相差 0° を示す。],
-) <fig-bode>
-
-図 @fig-bode より、位相差は 3.30 kHz で 0° となり、帰還率はこの近傍で最大となった。設計値 $f_0=3.34 "kHz"$ に対して、位相差が 0° となった実測周波数は 3.30 kHz であった。したがって誤差率は 1 % である。
-誤差率は1桁になっているため誤差の範囲内であると言える。
-なお、離散的な測定点の中で最大帰還率 $beta=0.324$ が得られたのは 3.4 kHz であった。
-近傍の測定分解能および電圧読取りのばらつきによる差とみなせる。
-
-
-
-表 6 より、2 回の測定でともに 3.33 kHz の発振を得た。理論値 3.34 kHz に対する誤差率は 0.3 % である。上で求めた増幅率 $A=3.04$ と、測定した帰還率 $beta=0.323$ より、
-
-$ A beta = 3.04 times 0.323 = 0.982 $
-
-となる。$A beta$ 理想値 1 からの差は 1.8 % であり、測定値の丸め、周波数による増幅率の変化および電圧測定の不確かさを考慮すれば、発振条件をほぼ満たしていたと判断できる。
