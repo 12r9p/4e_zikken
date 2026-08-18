@@ -1,54 +1,12 @@
 #import "../lib/report-utils.typ": *
 #show: setup_report
 
-// 図番号と assets 内の実ファイル名の対応
-#let image-paths = (
-  "assets/figures/01_帰還発振回路の発振原理.svg": "assets/帰還発振回路の発振原理.jpeg",
-  "assets/figures/02_エミッター接地増幅回路.svg": "assets/エミッター接地増幅回路.jpeg",
-  "assets/figures/03_エミッター接地バイアス回路.svg": "assets/エミッター接地増幅回路.jpeg",
-  "assets/figures/04_エミッター接地交流回路.svg": "assets/エミッター接地増幅回路の交流回路.jpeg",
-  "assets/figures/05_エミッター接地hパラメータ等価回路.svg": "assets/エミッター接地増幅回路のhパラメータを用いた簡易等価回路.jpeg",
-  "assets/figures/06_ベース接地増幅回路.svg": "assets/ベース接地増幅回路.jpeg",
-  "assets/figures/07_ベース接地バイアス回路.svg": "assets/ベース接地増幅回路.jpeg",
-  "assets/figures/08_ベース接地交流回路.svg": "assets/ベース接地増幅回路の交流回路.jpeg",
-  "assets/figures/09_ベース接地hパラメータ等価回路.svg": "assets/ベース接地増幅回路のhパラメータを用いた簡易等価回路.jpeg",
-  "assets/figures/10_ハートレー型発振回路.svg": "assets/ハートレー型発振回路.jpeg",
-  "assets/figures/11_ハートレー型交流等価回路1.svg": "assets/ハートレー型発振回路の交流等価回路1.jpeg",
-  "assets/figures/12_ハートレー型交流等価回路2.svg": "assets/ハートレー型発振回路の交流等価回路2.jpeg",
-  "assets/figures/13_ハートレー型交流等価回路3.svg": "assets/ハートレー型発振回路の交流等価回路3.jpeg",
-  "assets/figures/14_コルピッツ型発振回路.svg": "assets/コルピッツ型発振回路.jpeg",
-  "assets/figures/15_コルピッツ型交流等価回路1.svg": "assets/コルピッツ型発振回路の交流等価回路1.jpeg",
-  "assets/figures/16_コルピッツ型交流等価回路2.svg": "assets/コルピッツ型発振回路の交流等価回路2.jpeg",
-  "assets/figures/17_コルピッツ型交流等価回路3.svg": "assets/コルピッツ型発振回路の交流等価回路3.jpeg",
-  "assets/figures/18_ターマン型発振回路の帰還回路.svg": "assets/ターマン型発振回路の帰還回路.jpeg",
-  "assets/figures/19_ウィーンブリッジ回路.svg": "assets/ウィーンブリッジ回路.jpeg",
-  "assets/figures/20_ウィーンブリッジ増幅回路.svg": "assets/ウィーンブリッジ発振回路の増幅回路部.jpeg",
-  "assets/figures/21_ハートレー型発振回路の実験回路.svg": "assets/ハートレー型発振回路の実験回路.jpeg",
-  "assets/figures/22_コルピッツ型発振回路の実験回路.svg": "assets/コルピッツ型発振回路の実験回路.jpeg",
-  "assets/figures/23_ウィーンブリッジ発振回路の実験回路.svg": "assets/ウィーンブリッジ発振回路の実験回路.jpeg",
-)
-/*これいらないちゃんと画像表示するところのパスを変更するようにして*/
-
-// 図の幅はここで 1 枚ずつ調整する。
-#let figure-widths = (
-  feedback: 36%,
-  ce-circuit: 40%, ce-ac: 65%, ce-hparam: 105%,
-  cb-circuit: 42%, cb-ac: 50%, cb-hparam: 75%,
-  hartley: 52%, hartley-ac1: 56%, hartley-ac2: 65%, hartley-ac3: 25%,
-  colpitts: 52%, colpitts-ac1: 45%, colpitts-ac2: 65%, colpitts-ac3: 25%,
-  wien-feedback: 45%, wien-bridge: 55%, wien-amplifier: 35%,
-  hartley-experiment: 54%, colpitts-experiment: 54%, wien-experiment: 64%,
-  wien-feedback-measurement: 42%,
-  bode: 70%,
-)
-/*これもそれぞれ画像を表示するところに記入できるようにできない？*/
-
 // 検証時のみ --input render-circuit-images=false を指定する。
 #let render-circuit-images = sys.inputs.at("render-circuit-images", default: "true") == "true"
 #let figure_report(path: "", caption: "", label-name: "", width: 72%) = [
   #figure(
     if render-circuit-images {
-      image(image-paths.at(path, default: path), width: width)
+      image(path, width: width)
     } else {
       rect(width: width, height: 42mm, stroke: 0.5pt + gray, inset: 8pt)[
         #align(center + horizon)[回路図画像：#path]
@@ -107,10 +65,10 @@
 帰還発振回路の原理を図 @fig-feedback に示す。増幅器の電圧増幅率を $A$、帰還回路の伝達率を $beta$、入力電圧を $V_i$、出力電圧を $V_o$ とする。
 
 #figure_report(
-  path: "assets/figures/01_帰還発振回路の発振原理.svg",
+  path: "assets/帰還発振回路の発振原理.jpeg",
   caption: [帰還発振回路の発振原理],
   label-name: "fig-feedback",
-  width: figure-widths.at("feedback"),
+  width: 36%,
 )
 
 正帰還であるから、増幅器への入力は $V_i + beta V_o$ となる。したがって、
@@ -132,17 +90,17 @@ $ G = V_o / V_i = A / (1 - A beta) $
 エミッター接地増幅回路を図 @fig-ce-circuit に、交流回路および h パラメータを用いた簡易等価回路を図 @fig-ce-ac および図 @fig-ce-hparam に示す。
 
 #figure_report(
-  path: "assets/figures/02_エミッター接地増幅回路.svg",
+  path: "assets/エミッター接地増幅回路.jpeg",
   caption: [エミッター接地増幅回路],
   label-name: "fig-ce-circuit",
-  width: figure-widths.at("ce-circuit"),
+  width: 40%,
 )
 
 #grid(
   columns: (1fr, 1fr),
   gutter: 8pt,
-  figure_report(path: "assets/figures/04_エミッター接地交流回路.svg", caption: [エミッター接地の交流回路], label-name: "fig-ce-ac", width: figure-widths.at("ce-ac")),
-  figure_report(path: "assets/figures/05_エミッター接地hパラメータ等価回路.svg", caption: [エミッター接地の h パラメータ等価回路], label-name: "fig-ce-hparam", width: figure-widths.at("ce-hparam")),
+  figure_report(path: "assets/エミッター接地増幅回路の交流回路.jpeg", caption: [エミッター接地の交流回路], label-name: "fig-ce-ac", width: 65%),
+  figure_report(path: "assets/エミッター接地増幅回路のhパラメータを用いた簡易等価回路.jpeg", caption: [エミッター接地の h パラメータ等価回路], label-name: "fig-ce-hparam", width: 105%),
 )
 
 
@@ -156,18 +114,18 @@ $ A_v = v_o / v_i = - (h_("fe") / h_("ie")) R_C $
 ベース接地増幅回路を図 @fig-cb-circuit に、交流回路および h パラメータを用いた簡易等価回路を図 @fig-cb-ac および図 @fig-cb-hparam に示す。
 
 #figure_report(
-  path: "assets/figures/06_ベース接地増幅回路.svg",
+  path: "assets/ベース接地増幅回路.jpeg",
   caption: [ベース接地増幅回路],
   label-name: "fig-cb-circuit",
-  width: figure-widths.at("cb-circuit"),
+  width: 42%,
 )
 
 
 #grid(
   columns: (1fr, 1fr),
   gutter: 8pt,
-  figure_report(path: "assets/figures/08_ベース接地交流回路.svg", caption: [ベース接地の交流回路], label-name: "fig-cb-ac", width: figure-widths.at("cb-ac")),
-  figure_report(path: "assets/figures/09_ベース接地hパラメータ等価回路.svg", caption: [ベース接地の h パラメータ等価回路], label-name: "fig-cb-hparam", width: figure-widths.at("cb-hparam")),
+  figure_report(path: "assets/ベース接地増幅回路の交流回路.jpeg", caption: [ベース接地の交流回路], label-name: "fig-cb-ac", width: 50%),
+  figure_report(path: "assets/ベース接地増幅回路のhパラメータを用いた簡易等価回路.jpeg", caption: [ベース接地の h パラメータ等価回路], label-name: "fig-cb-hparam", width: 75%),
 )
 
 図 @fig-cb-hparam より、$i_c=h_("fe") i_b$、$v_i=-h_("ie") i_b$、$v_o=-R_C h_("fe") i_b$ である。したがって、
@@ -181,14 +139,14 @@ $ A_v = v_o / v_i = (h_("fe") / h_("ie")) R_C $
 === ① ハートレー型
 ハートレー型発振回路を図 @fig-hartley に示す。直流電圧源および結合・バイパスコンデンサを交流的に短絡した回路を図 @fig-hartley-ac1 に示す。さらに、交流的に等電位となる抵抗を短絡し、交流電流が流れない抵抗を開放して整理した回路を図 @fig-hartley-ac2 に示す。
 
-#figure_report(path: "assets/figures/10_ハートレー型発振回路.svg", caption: [ハートレー型発振回路], label-name: "fig-hartley", width: figure-widths.at("hartley"))
+#figure_report(path: "assets/ハートレー型発振回路.jpeg", caption: [ハートレー型発振回路], label-name: "fig-hartley", width: 52%)
 #grid(
   columns: (1fr, 1fr),
   gutter: 8pt,
-  figure_report(path: "assets/figures/11_ハートレー型交流等価回路1.svg", caption: [ハートレー型の交流等価回路 1], label-name: "fig-hartley-ac1", width: figure-widths.at("hartley-ac1")),
-  figure_report(path: "assets/figures/12_ハートレー型交流等価回路2.svg", caption: [ハートレー型の交流等価回路 2], label-name: "fig-hartley-ac2", width: figure-widths.at("hartley-ac2")),
+  figure_report(path: "assets/ハートレー型発振回路の交流等価回路1.jpeg", caption: [ハートレー型の交流等価回路 1], label-name: "fig-hartley-ac1", width: 56%),
+  figure_report(path: "assets/ハートレー型発振回路の交流等価回路2.jpeg", caption: [ハートレー型の交流等価回路 2], label-name: "fig-hartley-ac2", width: 65%),
 )
-#figure_report(path: "assets/figures/13_ハートレー型交流等価回路3.svg", caption: [ハートレー型の交流等価回路 3], label-name: "fig-hartley-ac3", width: figure-widths.at("hartley-ac3"))
+#figure_report(path: "assets/ハートレー型発振回路の交流等価回路3.jpeg", caption: [ハートレー型の交流等価回路 3], label-name: "fig-hartley-ac3", width: 25%)
 
 $ f_0 = 1 / (2 pi sqrt(L C)) $
 
@@ -197,16 +155,16 @@ $ f_0 = 1 / (2 pi sqrt(L C)) $
 === ② コルピッツ型
 コルピッツ型発振回路を図 @fig-colpitts に示す。直流電圧源およびバイパスコンデンサを交流的に短絡して整理した等価回路を図 @fig-colpitts-ac1 および図 @fig-colpitts-ac2 に示す。
 
-#figure_report(path: "assets/figures/14_コルピッツ型発振回路.svg", caption: [コルピッツ型発振回路], label-name: "fig-colpitts", width: figure-widths.at("colpitts"))
+#figure_report(path: "assets/コルピッツ型発振回路.jpeg", caption: [コルピッツ型発振回路], label-name: "fig-colpitts", width: 52%)
 #grid(
   columns: (1fr, 1fr),
   gutter: 8pt,
-  figure_report(path: "assets/figures/15_コルピッツ型交流等価回路1.svg", caption: [コルピッツ型の交流等価回路 1], label-name: "fig-colpitts-ac1", width: figure-widths.at("colpitts-ac1")),
-  figure_report(path: "assets/figures/16_コルピッツ型交流等価回路2.svg", caption: [コルピッツ型の交流等価回路 2], label-name: "fig-colpitts-ac2", width: figure-widths.at("colpitts-ac2")),
+  figure_report(path: "assets/コルピッツ型発振回路の交流等価回路1.jpeg", caption: [コルピッツ型の交流等価回路 1], label-name: "fig-colpitts-ac1", width: 45%),
+  figure_report(path: "assets/コルピッツ型発振回路の交流等価回路2.jpeg", caption: [コルピッツ型の交流等価回路 2], label-name: "fig-colpitts-ac2", width: 65%),
 )
-#figure_report(path: "assets/figures/17_コルピッツ型交流等価回路3.svg", caption: [コルピッツ型の交流等価回路 3], label-name: "fig-colpitts-ac3", width: figure-widths.at("colpitts-ac3"))
+#figure_report(path: "assets/コルピッツ型発振回路の交流等価回路3.jpeg", caption: [コルピッツ型の交流等価回路 3], label-name: "fig-colpitts-ac3", width: 25%)
 
-二つのコンデンサを $C_2$、$C_3$ とすると、共振に寄与する合成容量は $C_("eq")=C_2 C_3/(C_2+C_3)$ である。したがって、共振周波数は
+図 @fig-colpitts-ac3 の二つのコンデンサを $C_1$、$C_2$ とすると、共振に寄与する合成容量は $C_("eq")=C_1 C_2/(C_1+C_2)$ である。したがって、共振周波数は
 
 $ f_0 = 1 / (2 pi sqrt(L C_("eq"))) $
 
@@ -217,9 +175,9 @@ $ f_0 = 1 / (2 pi sqrt(L C_("eq"))) $
 == (4) ウィーンブリッジ発振回路の帰還率と平衡条件
 ターマン型発振回路の帰還回路を図 @fig-wien-feedback に示す。
 
-#figure_report(path: "assets/figures/18_ターマン型発振回路の帰還回路.svg", caption: [ターマン型発振回路の帰還回路], label-name: "fig-wien-feedback", width: figure-widths.at("wien-feedback"))
+#figure_report(path: "assets/ターマン型発振回路の帰還回路.jpeg", caption: [ターマン型発振回路の帰還回路], label-name: "fig-wien-feedback", width: 45%)
 
-$Z_1=1/(1/R_1+j omega C_1)$、$Z_2=R_2+1/(j omega C_2)$とおくと、分圧則より帰還率は
+$R_1$ と $C_1$ の並列回路のインピーダンスを $Z_1=1/(1/R_1+j omega C_1)$、$R_2$ と $C_2$ の直列回路のインピーダンスを $Z_2=R_2+1/(j omega C_2)$ とおくと、分圧則より帰還率は
 
 
 
@@ -239,21 +197,20 @@ $ beta = 1 / (1 + R_2/R_1 + C_1/C_2 + j (omega C_1 R_2 - 1/(omega C_2 R_1))) $
 
 ウィーンブリッジ回路を図 @fig-wien-bridge に示す。
 
-#figure_report(path: "assets/figures/19_ウィーンブリッジ回路.svg", caption: [ウィーンブリッジ回路], label-name: "fig-wien-bridge", width: figure-widths.at("wien-bridge"))
+#figure_report(path: "assets/ウィーンブリッジ回路.jpeg", caption: [ウィーンブリッジ回路], label-name: "fig-wien-bridge", width: 55%)
 
 平衡条件より、
 
 $ Z_1 R_4 = Z_2 R_3 $
 
-である。$Z_1$ および $Z_2$ を代入すると、
-/*z1,z2についての説明が必要*/
+である。ここで、$1/Z_1=1/R_1+j omega C_1, Z_2 = R_2 + 1/(j omega C_2) $ であるため、$Z_1$ および $Z_2$ を代入すると、
 
-$ R_4 / R_3 = Z_2 / Z_1 $
+$ R_4 / R_3 = Z_2 / Z_1  = (R_2 + 1 / (j omega C_2)) (1 / R_1 + j omega C_1) $
 
-$ = (R_2 + 1 / (j omega C_2)) (1 / R_1 + j omega C_1) $
 
-となる。これを展開して整理すると、
-/*途中式が必要*/
+$ R_4 / R_3 = R_2/R_1 + j omega C_1 R_2 + 1/(j omega C_2 R_1) + C_1/C_2 $
+
+となる。ここで $1/j=-j$ を用いて実部と虚部に分けると、
 
 $ R_4 / R_3 = R_2 / R_1 + C_1 / C_2 + j (omega C_1 R_2 - 1 / (omega C_2 R_1)) $
 
@@ -269,15 +226,20 @@ $ f_0 = 1 / (2 pi sqrt(R_1 R_2 C_1 C_2)) $
 
 を得る。また、虚部が 0 のときの実部から $R_4/R_3=R_2/R_1+C_1/C_2$ となる。
 
+図 @fig-wien-amplifier の増幅回路は非反転増幅回路であるため、その電圧増幅率は
 
-#figure_report(path: "assets/figures/20_ウィーンブリッジ増幅回路.svg", caption: [ウィーンブリッジ発振回路の増幅回路部], label-name: "fig-wien-amplifier", width: figure-widths.at("wien-amplifier"))
+$ A = 1 + R_4/R_3 $
+
+である。したがって、帰還回路の平衡条件から求めた $R_4/R_3$ を用いると、発振に必要な増幅率は $A=1+R_2/R_1+C_1/C_2$ と表される。
+
+#figure_report(path: "assets/ウィーンブリッジ発振回路の増幅回路部.jpeg", caption: [ウィーンブリッジ発振回路の増幅回路部], label-name: "fig-wien-amplifier", width: 35%)
 
 = 実験結果と検討
 
 == (1) ハートレー型発振回路
 ハートレー型発振回路の実験回路を図 @fig-hartley-experiment に示す。発振周波数の理論式は $f_0=1/(2 pi sqrt(L C_2))$ である。測定結果および誤差率を表 2 に示す。
 
-#figure_report(path: "assets/figures/21_ハートレー型発振回路の実験回路.svg", caption: [ハートレー型発振回路の実験回路], label-name: "fig-hartley-experiment", width: figure-widths.at("hartley-experiment"))
+#figure_report(path: "assets/ハートレー型発振回路の実験回路.jpeg", caption: [ハートレー型発振回路の実験回路], label-name: "fig-hartley-experiment", width: 54%)
 
 #set text(size: 7.5pt)
 #csv_table(
@@ -305,12 +267,11 @@ $ C_("open") = 38.2 "pF" $
 )
 #set text(size: 10pt)
 
-表 3 では誤差率がほとんど一桁になった。これらは誤差の範囲内であると言える。
-/*C2が86.4 pFのとき誤差率が2桁になっているのは...
-寄生容量を補正してもなお誤差が残った理由
-誤差率の計算式から、分母が大きくなるほど誤差率が小さくなるとは思ったけど違いそう*/
-このことから、表 2 で誤差率が大きくなった理由はコイルとトランジスタによる静電容量による影響があったということが確認できた。
 
+
+補正後の誤差率をみると、ほとんどが 1 桁になっているため、誤差の範囲内であるといえる。静電容量が小さい値である 85.5pF の時、誤差率が 2 桁となっている。これは、C2 が大きい時は、Copen の影響が小さいが、C2 が小さい時は、Copen の影響が大きくなるため誤差率が２桁になったと考えた。
+
+したがって、表 2 の大きな誤差の主因は寄生容量であること確認できる。
 
 == (2) コルピッツ型発振回路
 コルピッツ型発振回路の実験回路を図 @fig-colpitts-experiment に示す。発振周波数の理論式は
@@ -321,7 +282,7 @@ $ f_0 = 1 / (2 pi sqrt(L ((C_1C_3)/(C_1+C_3)))) $
 
 測定結果および誤差率を表 4 に示す。
 
-#figure_report(path: "assets/figures/22_コルピッツ型発振回路の実験回路.svg", caption: [コルピッツ型発振回路の実験回路], label-name: "fig-colpitts-experiment", width: figure-widths.at("colpitts-experiment"))
+#figure_report(path: "assets/コルピッツ型発振回路の実験回路.jpeg", caption: [コルピッツ型発振回路の実験回路], label-name: "fig-colpitts-experiment", width: 54%)
 
 #set text(size: 7.5pt)
 #csv_table(
@@ -359,27 +320,23 @@ $ C_("open") = 1 / ((2 pi f_0)^2 L_2) - (C_1C_3) / (C_1 + C_3) $
 )
 #set text(size: 10pt)
 
-表 6 より、補正後の誤差率をみると、ほとんどが 1 桁になっているため、誤差の範囲内であるといえる。
-/*この下の文章について疑問である。
-計算した寄生容量の平均を出してその数値で補正すると誤差が出るのは当たり前です。
-C3が小さい、周波数が高いほど誤差は大きくなることがわかってる
-これは誤差率の計算式から、分母が大きくなるほど誤差率が小さくなるのと逆だから何かしら説明を入れたい*/
-48.2 pF および 98.9 pF では補正後も誤差が比較的大きいが、これらは設定容量に対する $C_("open")$ の割合が大きく、個々の測定から求めた寄生容量の変化の影響を受けやすいためと考えられる。
-このことより、表 4 の誤差の主因はコイルとトランジスタによる静電容量であったと判断できる。
+表5を見ると、測定値から求めた $C_("open")$は 5.0 pF～35.1 pF の範囲で変化しており、一定の値ではないことがわかる。そのため、表6のように平均値である 21.5 pF をすべての条件に用いると、実際の寄生容量との差が補正後にも誤差として残ると考えられる。特に $C_3$ が小さい場合は合成容量も小さくなるため、寄生容量のわずかな違いでも全体に与える影響が大きくなる。このため、高周波側では周波数のずれも大きくなりやすい。
+
+以上から、表4で見られた誤差には寄生容量が大きく関係していると考えられる。また、表6で補正後にも誤差が残った理由としては、寄生容量を一定値として扱っていることに加え、コイルのインダクタンスやトランジスタの容量が周波数によって変化することも影響していると考えられる。
 
 == (3) ウィーンブリッジ発振回路
-ウィーンブリッジ発振回路の実験回路を図 @fig-wien-feedback-measurement に示す。
+ウィーンブリッジ発振器用帰還回路の実験回路を図 @fig-wien-feedback-measurement に示す。
 帰還回路の周波数特性を測定して得たボード線図を図 @fig-bode に示す。
 
 
 
 #figure(
-  image("assets/ウィーンブリッジ発振器用帰還回路の実験回路.jpeg", width: figure-widths.at("wien-feedback-measurement")),
+  image("assets/ウィーンブリッジ発振器用帰還回路の実験回路.jpeg", width: 42%),
   caption: [ウィーンブリッジ発振器用帰還回路の実験回路],
 ) <fig-wien-feedback-measurement>
 
 #figure(
-  image("assets/wien-bridge-bode.svg", width: figure-widths.at("bode")),
+  image("assets/wien-bridge-bode.svg", width: 65%),
   caption: [ウィーンブリッジ帰還回路のボード線図。点は測定値、破線は位相差 0° および最大帰還率を示す。],
 ) <fig-bode>
 
@@ -395,17 +352,17 @@ $ approx 3.34 "kHz" $
 
 $ (3.40 - 3.34) / 3.34 times 100 = 1.80 ... % approx 2 % $
 
-となる。誤差率は 1 桁であるため、誤差の範囲内であるといえる。
+この誤差率は 1 桁であるため、誤差の範囲内であるといえる。
 
 #pagebreak()
 
 次に、ウィーンブリッジ発振回路の実験回路を、図 @fig-wien-experiment に示す。
 
-#figure_report(path: "assets/figures/23_ウィーンブリッジ発振回路の実験回路.svg", caption: [ウィーンブリッジ発振回路の実験回路], label-name: "fig-wien-experiment", width: figure-widths.at("wien-experiment"))
+#figure_report(path: "assets/ウィーンブリッジ発振回路の実験回路.jpeg", caption: [ウィーンブリッジ発振回路の実験回路], label-name: "fig-wien-experiment", width: 42%)
 
 
 
-可変抵抗 $R_4=20.36 "kΩ"$ に設定し、増幅率を上昇させて発振を開始したときの周波数を表 7 に示す。
+可変抵抗 $R_4=20.41 "kΩ"$ に設定し、増幅率を上昇させて発振を開始したときの周波数を表 7 に示す。
 
 #figure(
   table(
@@ -432,25 +389,27 @@ $ (3.34 - 3.33) / 3.34 times 100 = 0.299 ... % approx 0.3 % $
 
 また、抵抗の実測値 $R_3=9.99 "kΩ"$、$R_4=20.41 "kΩ"$ を用いると、電圧増幅率 $A$ は
 
- $ A = 1 + R_4 / R_3 = 1 + 20.41 / 9.99 = 3.04 $
+ $ A = 1 + R_4 / R_3 = 1 + 20.41 / 9.99 = 3.0430 ... approx 3.04 $
 
 となる。
 
 原理の (4) より、発振条件を満たすために必要な電圧増幅率は、
 
-$ A = 1 + R_4 / R_3 = 1 + R_2 / R_1 + C_1 / C_2  = 1 + 0.992 / 1.01 + 48.7 / 46.7 = 3.03 $
+$ A = 1 + R_4 / R_3 = 1 + R_2 / R_1 + C_1 / C_2  = 1 + 0.992 / 1.01 + 48.4 / 46.7 = 3.0186 ... approx 3.02 $
 
-と求められる
+と求められる。
 
 誤差率は
 
-$ (3.04 - 3.03) / 3.03 times 100 = 0.330 ... % approx 0.3 % $
+$ (3.0430 - 3.0186) / 3.0186 times 100 = 0.808 ... % approx 0.8 % $
 
 となり、誤差率は 1 桁になっているため、誤差の範囲内であるといえる。
 
 また、測定した帰還率 $beta=0.324$ より、
 
-$ A beta = 3.04 times 0.324 = 0.985 $
+$ A beta = 3.0430 times 0.324 = 0.9859 ... approx 0.986 $
 
-となる。$A beta$ の理想値 1 からの誤差率は 1.5 % であり2桁になっているが、測定値の丸め、読み取り時の誤差によるものだと考えられる。
-/*ここについて、測定値の丸め以外に考えられることはある？*/
+/*誤差率を計算する式を入れて
+誤差率を求めるまでの経路をコメントで書いておいてほしい*/
+
+以上より、$A beta$ の理想値 1 からの誤差率は約 1.4 % であり、発振条件をほぼ満たしている。理想値との差には、測定値の丸めや読取り誤差のほか、抵抗・コンデンサの公差、オペアンプの有限な利得帯域幅と位相遅れ、オシロスコープによる帰還回路への負荷が影響すると考えられる。
