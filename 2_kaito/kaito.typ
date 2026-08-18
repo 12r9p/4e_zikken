@@ -102,9 +102,15 @@ $ G = V_o / V_i = A / (1 - A beta) $
   figure_report(path: "assets/エミッター接地増幅回路の交流回路.jpeg", caption: [エミッター接地の交流回路], label-name: "fig-ce-ac", width: 65%),
   figure_report(path: "assets/エミッター接地増幅回路のhパラメータを用いた簡易等価回路.jpeg", caption: [エミッター接地の h パラメータ等価回路], label-name: "fig-ce-hparam", width: 105%),
 )
+図 @fig-ce-hparam の赤矢印をループの正方向とする。入力側のループを時計回りに一周すると、電源では $v_i$ だけ電位が上昇し、$h_("ie")$ では電流 $i_b$ の向きに $h_("ie")i_b$ だけ電位が低下する。したがって、キルヒホッフの第 2 法則より、
 
+$ v_i - h_("ie") i_b = 0 quad quad v_i = h_("ie") i_b $
 
-図 @fig-ce-hparam より、$i_c=h_("fe") i_b$、$v_i=h_("ie") i_b$、$v_o=-R_C i_c=-R_C h_("fe") i_b$ と表せる。出力電圧の負号は、コレクタ抵抗における電圧降下の向きが出力電圧の定義と逆であることによる。よって電圧増幅率 $A_v$ は、
+となる。出力側のループは、赤矢印に沿って反時計回りにとる。制御電流源の電流 $i_c=h_("fe")i_b$ は上側の節点から下向きに流れるため、$R_C$ を流れる電流は同じ大きさで下から上へ流れる。$R_C$ の下端と上端の電位をそれぞれ $V_("L")$、$V_("H")$ とすると、受動符号規約より $V_("L")-V_("H")=R_C i_c$ である。一方、図の上向きを正とする出力電圧は $v_o=V_("H")-V_("L")$ であるため、
+
+$ v_o = -R_C i_c = -R_C h_("fe") i_b $
+
+と表せる。よって電圧増幅率 $A_v$ は、
 
 $ A_v = v_o / v_i = - (h_("fe") / h_("ie")) R_C $
 
@@ -128,7 +134,15 @@ $ A_v = v_o / v_i = - (h_("fe") / h_("ie")) R_C $
   figure_report(path: "assets/ベース接地増幅回路のhパラメータを用いた簡易等価回路.jpeg", caption: [ベース接地の h パラメータ等価回路], label-name: "fig-cb-hparam", width: 75%),
 )
 
-図 @fig-cb-hparam より、$i_c=h_("fe") i_b$、$v_i=-h_("ie") i_b$、$v_o=-R_C h_("fe") i_b$ である。したがって、
+図 @fig-cb-hparam では、入力側の赤矢印を時計回り、出力側の赤矢印を反時計回りの正方向とする。入力側のループでは、$h_("ie")$ を電流 $i_b$ の向きに上から下へ通過するため、電位は $h_("ie")i_b$ だけ低下する。また、$v_i$ は上向きを正としているため、ループを上から下へ通過すると $v_i$ だけ電位が低下する。したがって、
+
+$ -h_("ie") i_b - v_i = 0 quad therefore quad v_i = -h_("ie") i_b $
+
+となる。出力側では、制御電流源の電流 $i_c=h_("fe")i_b$ により、$R_C$ の電流は赤矢印と同じく下から上へ流れる。$R_C$ の下端と上端の電位をそれぞれ $V_("L")$、$V_("H")$ とすると、$V_("L")-V_("H")=R_C i_c$ となる。図の上向きを正とする出力電圧は $v_o=V_("H")-V_("L")$ であるため、
+
+$ v_o = -R_C i_c = -R_C h_("fe") i_b $
+
+である。したがって、
 
 $ A_v = v_o / v_i = (h_("fe") / h_("ie")) R_C $
 
@@ -143,10 +157,10 @@ $ A_v = v_o / v_i = (h_("fe") / h_("ie")) R_C $
 #grid(
   columns: (1fr, 1fr),
   gutter: 8pt,
-  figure_report(path: "assets/ハートレー型発振回路の交流等価回路1.jpeg", caption: [ハートレー型の交流等価回路 1], label-name: "fig-hartley-ac1", width: 56%),
-  figure_report(path: "assets/ハートレー型発振回路の交流等価回路2.jpeg", caption: [ハートレー型の交流等価回路 2], label-name: "fig-hartley-ac2", width: 65%),
+  figure_report(path: "assets/ハートレー型発振回路の交流等価回路1.jpeg", caption: [ハートレー型の交流等価回路 1\ 直流電圧源とコンデンサ $C_B,C_f,C_o$ を短絡する], label-name: "fig-hartley-ac1", width: 96%),
+  figure_report(path: "assets/ハートレー型発振回路の交流等価回路2.jpeg", caption: [ハートレー型の交流等価回路 2\ R1 の両端は等電位であるため、短絡とみなせる。\ また、Re には電流が流れないため開放する。\ Rf の抵抗値は 0 と近似し短絡する], label-name: "fig-hartley-ac2", width: 65%),
 )
-#figure_report(path: "assets/ハートレー型発振回路の交流等価回路3.jpeg", caption: [ハートレー型の交流等価回路 3], label-name: "fig-hartley-ac3", width: 25%)
+#figure_report(path: "assets/ハートレー型発振回路の交流等価回路3.jpeg", caption: [ハートレー型の交流等価回路 3\ 図@fig-hartley-ac2 を整理したものを示す。], label-name: "fig-hartley-ac3", width: 25%)
 
 $ f_0 = 1 / (2 pi sqrt(L C)) $
 
@@ -159,10 +173,10 @@ $ f_0 = 1 / (2 pi sqrt(L C)) $
 #grid(
   columns: (1fr, 1fr),
   gutter: 8pt,
-  figure_report(path: "assets/コルピッツ型発振回路の交流等価回路1.jpeg", caption: [コルピッツ型の交流等価回路 1], label-name: "fig-colpitts-ac1", width: 45%),
-  figure_report(path: "assets/コルピッツ型発振回路の交流等価回路2.jpeg", caption: [コルピッツ型の交流等価回路 2], label-name: "fig-colpitts-ac2", width: 65%),
+  figure_report(path: "assets/コルピッツ型発振回路の交流等価回路1.jpeg", caption: [コルピッツ型の交流等価回路 1\ 流電圧源とコンデンサ $C_B,C_o$ を短絡する], label-name: "fig-colpitts-ac1", width: 95%),
+  figure_report(path: "assets/コルピッツ型発振回路の交流等価回路2.jpeg", caption: [コルピッツ型の交流等価回路 2\ R1 の両端は等電位であるため、短絡とみなせる。\ また、Re には電流が流れないため開放する。\ Rf の抵抗値は 0 と近似し短絡する。], label-name: "fig-colpitts-ac2", width: 65%),
 )
-#figure_report(path: "assets/コルピッツ型発振回路の交流等価回路3.jpeg", caption: [コルピッツ型の交流等価回路 3], label-name: "fig-colpitts-ac3", width: 25%)
+#figure_report(path: "assets/コルピッツ型発振回路の交流等価回路3.jpeg", caption: [コルピッツ型の交流等価回路 3\ 図@fig-colpitts-ac2 を整理したものを示す。], label-name: "fig-colpitts-ac3", width: 25%)
 
 図 @fig-colpitts-ac3 の二つのコンデンサを $C_1$、$C_2$ とすると、共振に寄与する合成容量は $C_("eq")=C_1 C_2/(C_1+C_2)$ である。したがって、共振周波数は
 
@@ -320,7 +334,9 @@ $ C_("open") = 1 / ((2 pi f_0)^2 L_2) - (C_1C_3) / (C_1 + C_3) $
 )
 #set text(size: 10pt)
 
-表5を見ると、測定値から求めた $C_("open")$は 5.0 pF～35.1 pF の範囲で変化しており、一定の値ではないことがわかる。そのため、表6のように平均値である 21.5 pF をすべての条件に用いると、実際の寄生容量との差が補正後にも誤差として残ると考えられる。特に $C_3$ が小さい場合は合成容量も小さくなるため、寄生容量のわずかな違いでも全体に与える影響が大きくなる。このため、高周波側では周波数のずれも大きくなりやすい。
+表5を見ると、測定値から求めた $C_("open")$は 5.0 pF～35.1 pF の範囲で変化しており、一定の値ではないことがわかる。そのため、表6のように平均値である 21.5 pF をすべての条件に用いると、実際の寄生容量との差が補正後にも誤差として残ると考えられる。
+
+特に $C_3$ が小さい場合は合成容量も小さくなるため、寄生容量のわずかな違いでも全体に与える影響が大きくなる。このため、高周波側では周波数のずれも大きくなりやすい。
 
 以上から、表4で見られた誤差には寄生容量が大きく関係していると考えられる。また、表6で補正後にも誤差が残った理由としては、寄生容量を一定値として扱っていることに加え、コイルのインダクタンスやトランジスタの容量が周波数によって変化することも影響していると考えられる。
 
@@ -331,7 +347,7 @@ $ C_("open") = 1 / ((2 pi f_0)^2 L_2) - (C_1C_3) / (C_1 + C_3) $
 
 
 #figure(
-  image("assets/ウィーンブリッジ発振器用帰還回路の実験回路.jpeg", width: 42%),
+  image("assets/ウィーンブリッジ発振器用帰還回路の実験回路.jpeg", width: 40%),
   caption: [ウィーンブリッジ発振器用帰還回路の実験回路],
 ) <fig-wien-feedback-measurement>
 
@@ -358,7 +374,7 @@ $ (3.40 - 3.34) / 3.34 times 100 = 1.80 ... % approx 2 % $
 
 次に、ウィーンブリッジ発振回路の実験回路を、図 @fig-wien-experiment に示す。
 
-#figure_report(path: "assets/ウィーンブリッジ発振回路の実験回路.jpeg", caption: [ウィーンブリッジ発振回路の実験回路], label-name: "fig-wien-experiment", width: 42%)
+#figure_report(path: "assets/ウィーンブリッジ発振回路の実験回路.jpeg", caption: [ウィーンブリッジ発振回路の実験回路], label-name: "fig-wien-experiment", width: 52%)
 
 
 
@@ -409,17 +425,22 @@ $ (3.0430 - 3.0186) / 3.0186 times 100 = 0.808 ... % approx 0.8 % $
 
 $ A beta = 3.0430 times 0.324 = 0.9859 ... approx 0.986 $
 
-/*
-誤差率の算出過程：
-1. バークハウゼンの振幅条件より、ループ利得 Aβ の理想値を 1 とする。
-2. 実測値から求めた Aβ = 0.9859 と理想値との差を 1 - 0.9859 で求める。
-3. この差を理想値 1 で割り、100 を掛けて百分率に換算する。
-*/
-
 したがって、$A beta$ の理想値 1 に対する誤差率は、
 
-$ (1 - 0.9859) / 1 times 100 = 1.41 ... % approx 1.4 % $
+$ (1 - 0.9859) / 1 times 100  approx 1.4 % $
 
-となる。
+となった。
+以上より、実測した $A beta$ は0.986となり、理想値1との差は約1.4 %であった。この差には、オシロスコープによる実効値の測定誤差が主に影響したと考えられる。
 
-以上より、$A beta$ の理想値 1 からの誤差率は約 1.4 % であり、発振条件をほぼ満たしている。理想値との差には、測定値の丸めや読取り誤差のほか、抵抗・コンデンサの公差、オペアンプの有限な利得帯域幅と位相遅れ、オシロスコープによる帰還回路への負荷が影響すると考えられる。
+今回使用したオシロスコープの垂直軸利得確度は $plus.minus 3.0 %$ である。入力電圧と出力電圧をそれぞれ測定し、その比から帰還率を求めているため、両チャンネルの測定誤差の差が帰還率の誤差として現れる可能性がある。
+今回、$A beta = 1$ を満たすために必要な帰還率は、
+
+$
+beta
+= frac(1, 3.0430)
+approx 0.329
+$
+
+であり、実測値 $0.324$ との差は約1.3 %である。この差は、オシロスコープの測定確度によって生じる可能性がある。
+
+したがって、理論的な発振条件と実測結果は一致しているといえる。
