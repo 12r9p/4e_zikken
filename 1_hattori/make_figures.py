@@ -118,6 +118,6 @@ for vowel, index in [("あ", 14), ("い", 20), ("う", 24), ("え", 28), ("お",
     series = [(*spectrum("フーリエ変換による周波数解析2", index, 1024), "自分", "#4472c4")]
     for label, folder, color in vowel_comparison_sources:
         series.append((*spectrum_file(folder, f"{vowel}.csv", 1024), label, color))
-    draw_chart(f"vowel_{vowel}.png", series)
+    draw_chart(f"vowel_{vowel}.png", series, x_max=4000)
 
 print(f"generated {len(list(OUT.glob('*.png')))} figures in {OUT}")
