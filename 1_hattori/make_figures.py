@@ -102,7 +102,7 @@ draw_chart("sample_count_1024.png", [
 draw_chart("sample_count_256.png", [
     (*spectrum("500hz波形,48000Hz,256point", 7, 256), "", "#4472c4")])
 draw_chart("sample_count_64.png", [
-    (*spectrum("500hz波形,48000Hz,64point", 14, 64), "", "#4472c4")])
+    (*spectrum("500hz波形,48000Hz,64point", 9, 64), "", "#4472c4")])
 draw_chart("pitch_shift_minus10.png", [
     (*spectrum("フーリエ変換による周波数解析1 -10", 9, 1024), "", "#4472c4")])
 draw_chart("pitch_shift_minus20.png", [

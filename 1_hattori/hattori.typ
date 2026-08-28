@@ -88,10 +88,10 @@ $ Delta f = f_s / N $
 
 ファンクションジェネレータ等から入力した500 Hz、1 kHzの正弦波および矩形波をFFTし、振幅スペクトルを比較した。実験結果を図1〜図4に示す。
 
-#figure(image("figures/square_1000Hz.png", width: 100%), caption: [1 kHz 矩形波の振幅スペクトル])
-#figure(image("figures/sine_1000Hz.png", width: 100%), caption: [1 kHz 正弦波の振幅スペクトル])
-#figure(image("figures/square_500Hz.png", width: 100%), caption: [500 Hz 矩形波の振幅スペクトル])
-#figure(image("figures/sine_500Hz.png", width: 100%), caption: [500 Hz 正弦波の振幅スペクトル])
+#figure(image("figures/square_1000Hz.png", width: 90%), caption: [1 kHz 矩形波の振幅スペクトル])
+#figure(image("figures/sine_1000Hz.png", width: 90%), caption: [1 kHz 正弦波の振幅スペクトル])
+#figure(image("figures/square_500Hz.png", width: 90%), caption: [500 Hz 矩形波の振幅スペクトル])
+#figure(image("figures/sine_500Hz.png", width: 90%), caption: [500 Hz 正弦波の振幅スペクトル])
 
 正弦波は理論上、設定した基本周波数の成分だけをもつ。そのため、図2および図4では、それぞれ1 kHz付近および500 Hz付近に主ピークが現れ、他の成分は小さかった。一方、理想的な矩形波は基本波と奇数次高調波から構成され、高調波の振幅は次数が増えるほど小さくなる。図1および図3でも、基本周波数に加えて約3 kHz、5 kHzなどの奇数倍周波数にピークが現れた。ただし、実測値ではマイク、アンプ、A/D変換、窓関数、有限長データの影響により、理論値からのずれや不要な成分が生じたと考えられる。
 
@@ -101,9 +101,9 @@ $ Delta f = f_s / N $
 
 500 Hz矩形波について、FFTのサンプル数を1024、256、64として比較した。$f_s = 48\,"kHz"$ のとき、周波数分解能はそれぞれ46.875 Hz、187.5 Hz、750 Hzである。サンプル数ごとの結果を図5〜図7に示す。
 
-#figure(image("figures/sample_count_1024.png", width: 100%), caption: [サンプル数1024点の振幅スペクトル])
-#figure(image("figures/sample_count_256.png", width: 100%), caption: [サンプル数256点の振幅スペクトル])
-#figure(image("figures/sample_count_64.png", width: 100%), caption: [サンプル数64点の振幅スペクトル])
+#figure(image("figures/sample_count_1024.png", width: 90%), caption: [サンプル数1024点の振幅スペクトル])
+#figure(image("figures/sample_count_256.png", width: 90%), caption: [サンプル数256点の振幅スペクトル])
+#figure(image("figures/sample_count_64.png", width: 90%), caption: [サンプル数64点の振幅スペクトル])
 
 図5〜図7より、サンプル数を減らすほど周波数ビンの間隔が広がり、ピークの位置が粗くなった。64点では500 Hz付近の成分や高調波を細かく分離しにくく、256点、1024点の順にピークの位置と形状を確認しやすくなった。これは $Delta f = f_s/N$ より、サンプル数の増加に伴って周波数分解能が向上するためである。したがって、FFTで周波数成分を精度よく調べるには、目的とする周波数分解能に応じて十分なサンプル数を確保する必要がある。
 
@@ -121,24 +121,24 @@ VoiceChangerのMaincoreおよびSubcore1を用い、マイクから入力した�
 
 フーリエ変換による周波数解析1では、スマートフォンから約1200 Hzの正弦波を入力し、スピーカーから出力された音を再びスマートフォンで取得した。pitch_shiftを-10および-20に設定し、それぞれの入出力音声を解析した。結果を図8、図9に示す。
 
-#figure(image("figures/pitch_shift_minus10.png", width: 100%), caption: [pitch_shiftを-10に設定したときの振幅スペクトル])
-#figure(image("figures/pitch_shift_minus20.png", width: 100%), caption: [pitch_shiftを-20に設定したときの振幅スペクトル])
+#figure(image("figures/pitch_shift_minus10.png", width: 90%), caption: [pitch_shiftを-10に設定したときの振幅スペクトル])
+#figure(image("figures/pitch_shift_minus20.png", width: 90%), caption: [pitch_shiftを-20に設定したときの振幅スペクトル])
 
 図8、図9より、pitch_shiftの設定値を変えると、振幅スペクトルのピーク位置と周辺成分の分布が変化した。pitch_shiftは周波数をHz単位で直接指定する値ではなく、FFTで得た振幅スペクトルを移動させる量である。そのため、設定値の変更によって基本周波数成分の現れる位置が変わり、出力音声の音高にも変化が生じたと考えられる。また、スペクトルの移動に伴って高周波成分や不要成分の分布も変化するため、音高だけでなく音色や歪みの聞こえ方も変化すると考えられる。
+/*波形が乱れている理由に一度変換してからスピーカーで再生し、マイクで音声を取得するというプロセスが挟まってるからっていうのを書いといて*/
 
-/* 検討4: -10と-20の音声を実際に聴き比べ、音高、音質、音量、歪みの違いを追記する。 */
 
 == 3.5 母音の振幅スペクトル
 
-フーリエ変換による周波数解析2で取得した本人、班員A、班員Bの音声から、「あ」「い」「う」「え」「お」の各母音を取り出した。各母音について三者の振幅スペクトルを重ね合わせ、図10〜図14に示す。本人を青、班員Aをオレンジ、班員Bを緑で示した。
+フーリエ変換による周波数解析2で取得した本人、別班員の音声から、「あ」「い」「う」「え」「お」の各母音を取り出した。各母音について三者の振幅スペクトルを重ね合わせ、図10〜図14に示す。本人を青、班員Aをオレンジ、班員Bを緑で示した。
 
-#figure(image("figures/vowel_あ.png", width: 100%), caption: [母音「あ」の振幅スペクトル])
-#figure(image("figures/vowel_い.png", width: 100%), caption: [母音「い」の振幅スペクトル])
-#figure(image("figures/vowel_う.png", width: 100%), caption: [母音「う」の振幅スペクトル])
-#figure(image("figures/vowel_え.png", width: 100%), caption: [母音「え」の振幅スペクトル])
-#figure(image("figures/vowel_お.png", width: 100%), caption: [母音「お」の振幅スペクトル])
+#figure(image("figures/vowel_あ.png", width: 90%), caption: [母音「あ」の振幅スペクトル])
+#figure(image("figures/vowel_い.png", width: 90%), caption: [母音「い」の振幅スペクトル])
+#figure(image("figures/vowel_う.png", width: 90%), caption: [母音「う」の振幅スペクトル])
+#figure(image("figures/vowel_え.png", width: 90%), caption: [母音「え」の振幅スペクトル])
+#figure(image("figures/vowel_お.png", width: 90%), caption: [母音「お」の振幅スペクトル])
 
-図10〜図14を比較すると、母音ごとにピークの位置や高周波側の成分分布が異なった。また、同じ母音でも三者のピーク位置や振幅分布には差が見られた。これは、母音によって声道の形状が変化し、共鳴周波数であるフォルマントが変わることに加え、話者ごとに声帯の振動や声道の形状が異なるためである。したがって、母音は時間波形だけでなく、周波数領域のスペクトルの違いからも特徴付けられる。
+図10〜図14を比較すると、母音ごとにピークの位置や高周波側の成分分布が異なった。また、同じ母音でも三者のピーク位置や振幅分布には差が見られた。これは、母音によって声道の形状が変化し、共鳴周波数が変わることに加え、話者ごとに声帯の振動や声道の形状が異なるためである。したがって、母音は時間波形だけでなく、周波数領域のスペクトルの違いからも特徴付けられる。
 
 /* 検討5: 図10〜図14を見て、母音ごとの共通するピークと、本人・班員A・班員Bの個人差を具体的に追記する。 */
 
@@ -150,4 +150,7 @@ VoiceChangerのMaincoreおよびSubcore1を用い、マイクから入力した�
 
 以上より、マイクロコンピュータを用いた音声信号処理を通して、時間領域の音声を周波数領域で解析する方法、FFTのサンプル数が解析精度に与える影響、および周波数成分を操作して音声を変化させる方法を理解できた。
 
-/* TODO: 表紙の天候、共同実験者、使用機器の型番、および検討1〜5の実聴・班員比較の具体値を確認して完成させる。 */
+= 使用したサイト
+https://tomari.org/main/java/audioapi/audio_osc2.html
+
+https://youtu.be/74FIsXlS0EQ
