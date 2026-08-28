@@ -74,35 +74,45 @@ def draw_chart(filename, series, x_max=6000, width=1200, height=700):
             draw.line(points, fill=color, width=3)
         for x, y in points:
             draw.ellipse((x - 4, y - 4, x + 4, y + 4), fill=color, outline="white", width=1)
-    legend_x = right - 330
-    for idx, (_, _, label, color) in enumerate(series):
-        y = top + 18 + idx * 32
-        draw.line((legend_x, y + 10, legend_x + 35, y + 10), fill=color, width=3)
-        draw.text((legend_x + 45, y), label, fill="#333333", font=font(17))
+    if len(series) > 1:
+        legend_x = right - 330
+        for idx, (_, _, label, color) in enumerate(series):
+            y = top + 18 + idx * 32
+            draw.line((legend_x, y + 10, legend_x + 35, y + 10), fill=color, width=3)
+            draw.text((legend_x + 45, y), label, fill="#333333", font=font(17))
     draw.text(((left + right) // 2 - 60, height - 48), "周波数 [Hz]", fill="#222222", font=font(20))
     image.save(OUT / filename)
 
 
 draw_chart("sine_500Hz.png", [
-    (*spectrum("単色音声信号のフーリエ変換_正弦波", 16, 1024), "data016", "#4472c4")])
+    (*spectrum("単色音声信号のフーリエ変換_正弦波", 16, 1024), "", "#4472c4")])
 draw_chart("sine_1000Hz.png", [
-    (*spectrum("単色音声信号のフーリエ変換_正弦波", 33, 1024), "data033", "#4472c4")])
+    (*spectrum("単色音声信号のフーリエ変換_正弦波", 33, 1024), "", "#4472c4")])
 draw_chart("square_500Hz.png", [
-    (*spectrum("単色音声信号のフーリエ変換_矩形波", 28, 1024), "data028", "#4472c4")])
+    (*spectrum("単色音声信号のフーリエ変換_矩形波", 28, 1024), "", "#4472c4")])
 draw_chart("square_1000Hz.png", [
-    (*spectrum("単色音声信号のフーリエ変換_矩形波", 33, 1024), "data033", "#4472c4")])
+    (*spectrum("単色音声信号のフーリエ変換_矩形波", 33, 1024), "", "#4472c4")])
 draw_chart("sample_count_1024.png", [
-    (*spectrum("単色音声信号のフーリエ変換_矩形波", 28, 1024), "1024点", "#4472c4")])
+    (*spectrum("単色音声信号のフーリエ変換_矩形波", 28, 1024), "", "#4472c4")])
 draw_chart("sample_count_256.png", [
-    (*spectrum("500hz波形,48000Hz,256point", 7, 256), "256点", "#4472c4")])
+    (*spectrum("500hz波形,48000Hz,256point", 7, 256), "", "#4472c4")])
 draw_chart("sample_count_64.png", [
-    (*spectrum("500hz波形,48000Hz,64point", 14, 64), "64点", "#4472c4")])
+    (*spectrum("500hz波形,48000Hz,64point", 14, 64), "", "#4472c4")])
 draw_chart("pitch_shift_minus10.png", [
-    (*spectrum("フーリエ変換による周波数解析1 -10", 9, 1024), "pitch_shift=-10", "#4472c4")])
+    (*spectrum("フーリエ変換による周波数解析1 -10", 9, 1024), "", "#4472c4")])
 draw_chart("pitch_shift_minus20.png", [
-    (*spectrum("フーリエ変換による周波数解析1 -20", 3, 1024), "pitch_shift=-20", "#4472c4")])
+    (*spectrum("フーリエ変換による周波数解析1 -20", 3, 1024), "", "#4472c4")])
+
+# 母音は本人のデータを青で描く。他者のデータを追加するときは、
+# (表示名, フォルダ名, data番号, 色) をここへ追加する。
+vowel_comparison_sources = [
+    # ("班員A", "フーリエ変換による周波数解析2_班員A", 14, "#ed7d31"),
+    # ("班員B", "フーリエ変換による周波数解析2_班員B", 14, "#70ad47"),
+]
 for vowel, index in [("あ", 14), ("い", 20), ("う", 24), ("え", 28), ("お", 33)]:
-    draw_chart(f"vowel_{vowel}.png", [
-        (*spectrum("フーリエ変換による周波数解析2", index, 1024), vowel, "#4472c4")])
+    series = [(*spectrum("フーリエ変換による周波数解析2", index, 1024), "自分", "#4472c4")]
+    for label, folder, other_index, color in vowel_comparison_sources:
+        series.append((*spectrum(folder, other_index, 1024), label, color))
+    draw_chart(f"vowel_{vowel}.png", series)
 
 print(f"generated {len(list(OUT.glob('*.png')))} figures in {OUT}")

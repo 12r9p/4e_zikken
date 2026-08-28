@@ -5,7 +5,7 @@
 #let title = "デジタル信号処理"
 #let place = "電子計測実験室"
 #let date = "2026年6月26日"
-#let whether = ""
+#let whether = "　晴れ　気温　21.9℃　湿度　65％"
 #let teacher = "服部 教員"
 // ================================
 
